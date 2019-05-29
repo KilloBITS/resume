@@ -1,0 +1,46 @@
+body{
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 00;
+  top: 0;
+  /* background: url(../images/background.jpg); */
+}
+
+.contentData{
+  width: 100%;
+  height: 100%;
+}
+
+.block{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.thumb-vertical {
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: inherit;
+  background-color: white;
+}
+
+.block .center_block{
+  width: calc(100% - 200px);
+  height: calc(100% - 200px);
+  border: 4px solid white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
