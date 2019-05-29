@@ -8,6 +8,7 @@
   font-family: sans-serif;
   padding-top: 10px;
   padding-right: 10px;
+  background-color: black;
 }
 
 .topmenu .menuBlock{
@@ -21,7 +22,7 @@
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: -1px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   opacity: 0.9;
   transition: 0.3s;
