@@ -1,6 +1,3 @@
-
-
-
 let handleScroll = () => {
   //mainCenter
   const scrollBlock = document.getElementById('scrollBlock');
