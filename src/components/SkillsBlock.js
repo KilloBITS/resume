@@ -28,34 +28,50 @@ class RectsBtn extends React.Component {
   render(){
     return <div className="Blobs_data">
       <div className="row animate-multiple">
+
+      <Bounce>
       <div className="col-md-3 col-6 animated fadeInUp">
-      <h4 className="item-1">
-      <a href="#">
-      <span>Websites</span>
-      </a>
-      </h4>
+        <h4 className="item-1">
+          <a href="#">
+            <span>Websites</span>
+          </a>
+        </h4>
       </div>
-      <div className="col-md-3 col-6 animated fadeInUp">
-      <h4 className="item-2">
-      <a href="#">
-      <span>Desctop</span>
-      </a>
-      </h4>
-      </div>
-      <div className="col-md-3 col-6 animated fadeInUp">
-      <h4 className="item-3">
-      <a href="#">
-      <span>E-Commerce</span>
-      </a>
-      </h4>
-      </div>
-      <div className="col-md-3 col-6 animated fadeInUp">
-      <h4 className="item-4">
-      <a href="#">
-      <span>Design</span>
-      </a>
-      </h4>
-      </div>
+      </Bounce>
+
+
+
+      <Bounce>
+        <div className="col-md-3 col-6 animated fadeInUp">
+          <h4 className="item-2">
+            <a href="#">
+              <span>Desctop</span>
+            </a>
+          </h4>
+        </div>
+      </Bounce>
+
+
+      <Bounce>
+        <div className="col-md-3 col-6 animated fadeInUp">
+          <h4 className="item-3">
+            <a href="#">
+              <span>E-Commerce</span>
+            </a>
+          </h4>
+        </div>
+      </Bounce>
+
+      <Bounce>
+        <div className="col-md-3 col-6 animated fadeInUp">
+          <h4 className="item-4">
+            <a href="#">
+              <span>Design</span>
+            </a>
+          </h4>
+        </div>
+      </Bounce>
+
       </div>
     </div>
   }
@@ -72,7 +88,7 @@ class SkillsBlock extends React.Component {
         <Bounce><h1 style={{color: "white"}} className="whiteBefore">Навыки и технологии</h1></Bounce>
       </div>
       <RectsBtn />
-    
+
 
     </div>
   }

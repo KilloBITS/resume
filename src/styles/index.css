@@ -1883,9 +1883,10 @@ main {
 
 .centerLine{
   width: 4px;
-  height: 220px;
+  height: 260px;
   margin: auto;
-  background-color: #fb5979;
+  background-color: #ffffff;
+  margin-top: 10px;
 }
 
 .aboutContent{

@@ -33,6 +33,7 @@ class AboutBlock extends React.Component {
         </div>
         <div className="centerBlock">
           <AboutLeft text={this.props.text} />
+          <AboutRight />
         </div>
       </div>
     </div>
