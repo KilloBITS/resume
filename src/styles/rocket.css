@@ -1,0 +1,46 @@
+/**
+ * Rocket design made by: https://www.behance.net/barrud
+ */
+@-webkit-keyframes rocket-move {
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+@keyframes rocket-move {
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+.rocketBlock{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.rocketBlock .pen-header {
+  color: #fff;
+  text-align: center;
+}
+
+.rocketBlock .rocket-wrapper {
+  padding: 5%;
+  text-align: center;
+}
+
+.rocketBlock .rocket {
+  -webkit-animation: rocket-move 2s ease-in-out infinite alternate;
+          animation: rocket-move 2s ease-in-out infinite alternate;
+}
+
+.rocketBlock .pen-footer {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.rocketBlock a {
+  color: inherit;
+}

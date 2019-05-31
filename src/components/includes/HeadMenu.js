@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/topmenu.css';
+import '../../styles/topmenu.css';
 
 //test Data Array
 const data = [
@@ -13,9 +13,9 @@ const data = [
 ];
 const menuBtn = data.map((comp, key) => <div key={key} className="menu_btn" id={comp.id} def-title={comp.title}>{comp.name}</div>);
 
-const menuLeft = <div className="menuBlock">1</div>
-const menuCenter = <div className="menuBlock">2</div>
-const menuRight = <div className="menuBlock menuRight">{menuBtn}</div>
+const menuLeft = <div className="menuBlock"></div>
+const menuCenter = <div className="menuBlock menuCenter">{menuBtn}</div>
+const menuRight = <div className="menuBlock menuRight"></div>
 
 class HeadMenu extends React.Component {
   render() {
