@@ -1,5 +1,5 @@
 .topmenu{
-  position: fixed;
+  position: absolute;
   z-index: 12;
   top: 0;
   left: 0;
@@ -8,7 +8,6 @@
   font-family: sans-serif;
   padding-top: 10px;
   padding-right: 10px;
-  background-color: #000000;
 }
 
 .topmenu .menuBlock{

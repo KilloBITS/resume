@@ -25,7 +25,10 @@ class SocialsBlock extends React.Component {
   render() {
     return <div className="block socialsBlock">
     <div className="block_title">
-      <Bounce><h1 style={{color: "black"}} className="blackBefore">Обо мне</h1></Bounce>
+      <Bounce>
+        <h1 style={{color: "white"}} className="whiteBefore">Социальные сети</h1>
+      </Bounce>
+      <div className="shadowTitle">Социальные сети</div>
     </div>
       <PaperPlane/>
     </div>

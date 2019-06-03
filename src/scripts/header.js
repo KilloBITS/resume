@@ -13,7 +13,7 @@ import * as THREE from 'three';
     canvas.setAttribute('height', window.innerHeight);
     canvas.setAttribute('id', "stars");
     ctx = canvas.getContext('2d');
-    ctx.fillStyle = "#ffffff";
+    ctx.fillStyle = "#1b1d1e";
     for (i = j = 0; j <= 200; i = ++j) {
       ctx.beginPath();
       sizeRandom = Math.random() * 2;
@@ -44,9 +44,12 @@ import * as THREE from 'three';
       color: 0xe3c97f,
       shading: THREE.FlatShading });
 
+
+
     geometryBase.vertices.forEach(function (v) {
       return v[["x", "y", "z"][~~(Math.random() * 3)]] += Math.random() * 10;
     });
+
     [terranHighGeom.vertices, terranGeom.vertices].forEach(function (g) {
       return g.forEach(function (v) {
         return v[["x", "y", "z"][~~(Math.random() * 3)]] += Math.random() * 40;
@@ -56,6 +59,7 @@ import * as THREE from 'three';
     terran = new THREE.Mesh(terranGeom, material);
     highTerran = new THREE.Mesh(terranHighGeom, highTerranMat);
     scene.add(base);
+    scene.background = new THREE.Color( '#1b1d1e' );
     base.add(terran);
     base.add(highTerran);
     light = new THREE.DirectionalLight(0xffffff);
@@ -70,8 +74,10 @@ import * as THREE from 'three';
       renderer = new THREE.CanvasRenderer();
       alert("come back in chrome or firefox! or enable webgl");
     }
+
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById('cloud-overlay').appendChild(renderer.domElement);
+
     animate = function () {
       base.rotation.y += 0.00125;
       requestAnimationFrame(animate);

@@ -5,6 +5,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Scrollbars } from 'react-custom-scrollbars';
 import MenuHead from './components/includes/HeadMenu.js';
+import NavigationBAR from './components/includes/NavigationBAR.js';
+import OpenedMenu from './components/includes/OpenedMenu.js';
 import Preloader from './components/Preloader.js';
 import MainBlock from './components/MainBlock.js';
 import AboutBlock from './components/AboutBlock.js';
@@ -30,7 +32,32 @@ class BodyContent extends React.Component {
         in: 'https://www.linkedin.com/in/ihor-kalinyuk-601613153/',
         git: 'https://github.com/KilloBITS'
       },
-      aboutText: 'Web developers on the job market are typically best served by professional resumes that emphasize both their strong tech skills and their creative design talents. Thus, the format of a web developer resume can be more “artistic” than that which would be utilized for more conservative career fields. It should also include a tech table that lists all of the software and tools that the candidate is experienced in using for web design. Common software and web development tools include: NetSuite, Node.js, HTML, CSS, C#, JavaScript, Git Hub, Bootstrap, Gulp, Handlebars, Bit Bucket, Drupal, SEO, UI/UX, and Python. Web developer resumes also need to incorporate as many industry-specific keywords as possible in order to be ranked highly by the sophisticated applicant tracking systems that companies often now employ to review incoming job applications. If a resume and its accompanying cover letter fail to use the keywords that these systems are programmed to identify, it may be well be doomed never to reach the human eye of a hiring manager. The best guide to knowing which keywords to use is the language used in the job advertisement to which one is applying. Keyword phrases that are frequently used in postings for web developers include: “LAMP development,” “working with command lines,” “writing modules,” “version control systems,” “continuous integration,” “DevOps practices,” “responsive design,” “agile software development,” “front-end systems,” “debugging,” “server-side scripting,” “writing application code,” and “object-oriented design.”A tech table, as previously mentioned, is a great place to insert keywords. So is an opening resume summary statement (also known as a summary of qualifications). By beginning your web developer resume with a qualifications profile enriched with keywords, you’ll ensure that you both “pass” the scoring algorithms of the applicant tracking systems and immediately catch the attention of hiring managers. It is also an effective strategy, in addition to the use of a tech table, to mention the different technologies you’ve utilized in each of the jobs you’ve held.'
+      aboutText:
+      `I greet you on my page.
+
+      I am very glad to see you and tell Hos a little about myself.
+      And so let's start from the very beginning, my name is Kalenyuk Igor. I was born on June 26, 1997 in a town called Ivanichi. such as C #. In the first year of college, I discovered web development and realized that it was mine, I began to make the first simple websites, and after a while I already mastered Javascript and its various frameworks. Although timepieces are a topic that can be discussed for a very long time, I will clarify some of my favorites, despite their difficulties and differences, I believe that they all have their pros and cons ... The first will be React since it is one of the most popular and popular in world (this is my personal opinion), jQuery will go second because we all started with it and many continue to work with it, it is an indispensable part of what you see on the Internet. There are also many other classes with which I work, you can see them below in the block where my skills are described.
+
+      You probably have a lot of questions? And how am I different from others?
+      I will answer you:
+      - I am a simple developer and do not differ much from others.
+      But I have the advantage that others just do their job and for me web development is also a hobby / hobby, and most of my life is dedicated to her!
+
+      Now the only thing I want to say is thanks for reading this article. More detailed information you will get by reading my site, believe me, everything is written there)`,
+      blog: [
+        {
+          title: 'Created this site',
+          date: '017.05.2019',
+          image: 'myphoto.png',
+          text: 'Good day, about a month ago, I decided to create my portfolio, but my hands did not reach, and it happened! I am glad to welcome everyone on my page, I hope you appreciate my efforts))'
+        },
+        {
+          title: 'The birth of an idea',
+          date: '03.06.2019',
+          image: 'myphoto.png',
+          text: 'Today came one idea that can make the life of many much more convenient. What an idea, I still will not say but believe it will be cool.'
+        }
+      ]
     }
   }
 
@@ -38,11 +65,13 @@ class BodyContent extends React.Component {
     return (
       <div className={this.props.className}>
         <Preloader />
+        <NavigationBAR />
+        <OpenedMenu />
         <MenuHead />
         <MainBlock socials={this.state.socials}/>
         <AboutBlock text={this.state.aboutText}/>
         <SkillsBlock />
-        <BlogBlock />
+        <BlogBlock blog={this.state.blog}/>
         <ProjectsBlock />
         <SocialsBlock />
         <CallBlock />
