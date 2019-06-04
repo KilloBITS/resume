@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/topmenu.css';
+import functions from '../../scripts/functions.js';
 
 //test Data Array
 const data = [
@@ -18,8 +19,12 @@ const menuCenter = <div className="menuBlock menuCenter">{menuBtn}</div>
 const menuRight = <div className="menuBlock menuRight"></div>
 
 class HeadMenu extends React.Component {
+  constructor(props){
+    super(props);
+    this.btnClicker = functions.clickYakor();
+  }
   render() {
-    return <div className="topmenu">
+    return <div className="topmenu" onLoad={this.btnClicker}>
       {menuLeft}
       {menuCenter}
       {menuRight}

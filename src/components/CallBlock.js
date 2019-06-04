@@ -3,7 +3,7 @@ import Bounce from 'react-reveal/Bounce';
 
 class CallBlock extends React.Component {
   render() {
-    return <div className="block">
+    return <div className="block"  id={this.props.id}>
     <div className="block_title">
       <Bounce>
         <h1 style={{color: "white"}} className="whiteBefore">Связь</h1>

@@ -23,7 +23,7 @@ class PaperPlane extends React.Component {
 
 class SocialsBlock extends React.Component {
   render() {
-    return <div className="block socialsBlock">
+    return <div className="block socialsBlock" id={this.props.id}>
     <div className="block_title">
       <Bounce>
         <h1 style={{color: "white"}} className="whiteBefore">Социальные сети</h1>

@@ -189,15 +189,16 @@ html {
   position: fixed;
   right: 0;
   top: 0;
-  width: 65px;
+  width: 28px;
   height: 100%;
   z-index: 20;
+  background-color: #343637;
 }
 
 .navBar .navTop{
   position: absolute;
   top: 15px;
-  right: 15px;
+  right: 42px;
 }
 
 .mobileMenuBtnFade{
@@ -206,41 +207,72 @@ html {
   position: relative;
   border: 2px solid white;
   cursor: pointer;
-  background-color: black;
+  background-color: #1b1d1e;
   opacity: 0;
   transition: 0.3s;
   pointer-events: none;
+}
+
+.mobileMenuBtnFade:after{
+  content: '';
+  width: calc(100% - 10px);
+  height: 3px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  box-shadow: 0px 9px 0px 0px white;
+}
+
+.mobileMenuBtnFade:before{
+  content: '';
+  width: calc(100% - 10px);
+  height: 3px;
+  position: absolute;
+  bottom: 6px;
+  left: 5px;
+  background-color: white;
+  box-shadow: 0px -9px 0px 0px white;
+}
+
+.navBar .navCenter{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.navBar .navCenter .centerMinBtnBack{
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navBar .navCenter .centerMinBtnBack.activeBarBtn{
+  font-size: 20px;
+  width: calc(100% + 15px);
+  right: 10px;
+  position: relative;
+  border-radius: 24px 0 0 20px;
+  height: 40px;
+  line-height: 40px;
+  color: #90c05d;
+  z-index: 1;
 }
 
 .showedBtn{
   opacity: 1;
 }
 
-.mobileMenuBtnFade:after{
-  content: '';
-  width: 40px;
-  height: 40px;
-  background-color: red;
-  z-index: -1;
-  transition: 0.3s;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
 .mobileMenuBtnFade.showedBtn{
   pointer-events: all;
 }
 
-.mobileMenuBtnFade:hover.mobileMenuBtnFade:after{
-  left: -8px;
-  top: 10px;
 
-}
-
-.navBar .navCenter{
-
-}
 .navBar .navBottom{
 
 }
@@ -1960,7 +1992,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 18px;
   width: 100%;
   padding: 20px;
   background-color: #1b1d1e;
@@ -1972,7 +2004,7 @@ main {
 
 .centerLine{
   width: 4px;
-  height: 310px;
+  height: 184px;
   margin: auto;
   background-color: #ffffff;
   margin-top: 10px;
@@ -1995,7 +2027,7 @@ main {
 .aboutContent{
   width: calc(100% - 50px);
   margin: auto;
-  /* border-left: 10px solid #90c05d; */
+  margin-top: 10px;
   height: 100%;
   position: relative;
 }
@@ -2185,13 +2217,14 @@ main {
 }
 
 .progressLine span{
-  font-size: 30px;
+  font-size: 22px;
   position: absolute;
   z-index: 1;
   left: 100px;
   top: 50%;
   transform: translate(0, -50%);
-  top: 33px;
+  top: 35px;
+  text-shadow: 1px 1px 0px black;
 }
 
 .progressBar{
@@ -2369,26 +2402,27 @@ main {
   background-color: white;
   text-transform: uppercase;
   padding: 3px 10px;
-  top: -11px;
+  top: -15px;
+  font-size: 22px;
 }
 .defaultLine span:after,.defaultLine span:before{
   position: absolute;
-      content: '';
-      top: 0px;
-      width: 0;
-      height: 0;
+  content: '';
+  top: 0px;
+  width: 0;
+  height: 0;
 }
 
 
 .defaultLine span:after{
-  border: 12px solid transparent;
+  border: 16px solid transparent;
   border-left-color: rgb(255, 255, 255);
   border-right: 0;
   left: calc(100% - 0px);
 
 }
 .defaultLine span:before{
-  border: 12px solid transparent;
+  border: 16px solid transparent;
   border-right-color: rgb(255, 255, 255);
   border-left: 0;
   right: 100%;

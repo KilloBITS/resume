@@ -1,5 +1,6 @@
 import './styles/index.css';
 import handleScroll from './scripts/index.js';
+import functions from './scripts/functions.js';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -18,8 +19,8 @@ import CallBlock from './components/CallBlock.js';
 import FooterBlock from './components/FooterBlock.js';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
-library.add(fab, faCheckSquare, faCoffee)
+import { faCheckSquare, faCoffee, faHome , fas} from '@fortawesome/free-solid-svg-icons'
+library.add(fab, faCheckSquare, faCoffee, fas)
 
 class BodyContent extends React.Component {
   constructor(props){
@@ -68,13 +69,13 @@ class BodyContent extends React.Component {
         <NavigationBAR />
         <OpenedMenu />
         <MenuHead />
-        <MainBlock socials={this.state.socials}/>
-        <AboutBlock text={this.state.aboutText}/>
-        <SkillsBlock />
-        <BlogBlock blog={this.state.blog}/>
-        <ProjectsBlock />
-        <SocialsBlock />
-        <CallBlock />
+        <MainBlock socials={this.state.socials} id="yakor_main"/>
+        <AboutBlock text={this.state.aboutText} id="yakor_about"/>
+        <SkillsBlock id="yakor_skills"/>
+        <BlogBlock blog={this.state.blog} id="yakor_block"/>
+        <ProjectsBlock id="yakor_projects"/>
+        <SocialsBlock id="yakor_socials"/>
+        <CallBlock id="yakor_call"/>
         <FooterBlock />
     </div>)
   }

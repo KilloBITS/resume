@@ -185,7 +185,7 @@ class ProgressBars extends React.Component {
 
 class SkillsBlock extends React.Component {
   render() {
-    return <div className="block skillsBlock">
+    return <div className="block skillsBlock" id={this.props.id}>
       <div className="block_title">
         <Bounce>
           <h1 style={{color: "white"}} className="whiteBefore">Навыки и технологии</h1>

@@ -46,7 +46,7 @@ class AboutRight extends React.Component {
 
 class AboutBlock extends React.Component {
   render() {
-    return <div className="block aboutBlock">
+    return <div className="block aboutBlock" id={this.props.id}>
       <div className="block_title">
         <Bounce>
           <h1 style={{color: "white"}} className="whiteBefore">Обо мне</h1>
