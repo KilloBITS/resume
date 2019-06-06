@@ -26,7 +26,7 @@ class MainDesign extends React.Component {
     return <main>
 			<div className="introduction-block">
 				<div className="scroller">
-					<div className="mouse">
+					<div className="mouse" id="mouse">
 						<div className="scroll-wheel"></div>
 					</div>
 					<svg role="presentation" className="icn" width="20" height="20"></svg>
@@ -87,7 +87,7 @@ class MainBlock extends React.Component {
   }
 //
   render() {
-    return <div className={this.state.show ? "block mainBlock loaded" : "block mainBlock"} >
+    return <div className={this.state.show ? "block mainBlock loaded" : "block mainBlock"}  id="yakor_main">
       <div id="cloud-overlay"></div>
       <MainDesign />
       <MainBlockContent socials={this.props.socials}/>

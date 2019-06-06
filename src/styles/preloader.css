@@ -1,1 +1,51 @@
+.preloader_data{
+  position: fixed;
+  z-index: 100500;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #1b1d1e;
+}
 
+
+.preloader_data:before, .preloader_data:after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  background-color: white;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.preloader_data:before{
+  left: 100%;
+  transition: 0.5s;
+}
+
+.preloader_data:after{
+  right: 100%;
+  transition: 0.5s;
+}
+
+.preloader_data.loadedDataClass:before{
+  left: 0;
+}
+
+.preloader_data.loadedDataClass:after{
+  right: 0;
+}
+
+.loaderLogoBack{
+  opacity: 0;
+  transition: 0.3s;
+  background-color: white;
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 160px;
+}

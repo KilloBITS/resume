@@ -1,3 +1,4 @@
+import './styles/preloader.css';
 import './styles/index.css';
 import handleScroll from './scripts/index.js';
 import functions from './scripts/functions.js';
@@ -5,6 +6,7 @@ import functions from './scripts/functions.js';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Scrollbars } from 'react-custom-scrollbars';
+
 import MenuHead from './components/includes/HeadMenu.js';
 import NavigationBAR from './components/includes/NavigationBAR.js';
 import OpenedMenu from './components/includes/OpenedMenu.js';
@@ -17,6 +19,7 @@ import ProjectsBlock from './components/ProjectsBlock.js';
 import SocialsBlock from './components/SocialsBlock.js';
 import CallBlock from './components/CallBlock.js';
 import FooterBlock from './components/FooterBlock.js';
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare, faCoffee, faHome , fas} from '@fortawesome/free-solid-svg-icons'

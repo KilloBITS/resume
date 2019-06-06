@@ -1,6 +1,7 @@
 import React from 'react';
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AbsoluteImage from './includes/absoluteImage.js';
 
 class AboutLeft extends React.Component {
@@ -25,7 +26,6 @@ class PaperPlane extends React.Component {
     return <div className="animationPaperPlane">
       <svg viewBox="0 0 3387 1270">
         <path id="planePath" className="planePath" d="M-226 626c439,4 636,-213 934,-225 755,-31 602,769 1334,658 562,-86 668,-698 266,-908 -401,-210 -893,189 -632,630 260,441 747,121 1051,91 360,-36 889,179 889,179"/>
-
         <animateMotion xlinkHref="#plane" dur="10s" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#planePath" />
         </animateMotion>
@@ -39,6 +39,16 @@ class AboutRight extends React.Component {
     return <Fade top>
     <div className="aboutBlockData">
       <div className="centerLine" />
+      <div className="defaultTableTitle">My Hobby</div>
+      <div className="hobbiesBlock">
+        <div className="myHobbie"><FontAwesomeIcon icon={['fas','drumstick-bite']} /></div>
+        <div className="myHobbie"><FontAwesomeIcon icon={['fas','gamepad']} /></div>
+        <div className="myHobbie"><FontAwesomeIcon icon={['fas','cocktail']} /></div>
+        <div className="myHobbie"><FontAwesomeIcon icon={['fas','laptop-code']} /></div>
+        <div className="myHobbie"><FontAwesomeIcon icon={['fas','umbrella-beach']} /></div>
+        <div className="myHobbie"><FontAwesomeIcon icon={['fas','music']} /></div>
+        <div className="myHobbie"><FontAwesomeIcon icon={['fas','feather-alt']} /></div>
+      </div>
     </div>
     </Fade>
   }
@@ -59,7 +69,6 @@ class AboutBlock extends React.Component {
           <AboutRight />
         </div>
       </div>
-      <PaperPlane />
     </div>
   }
 }

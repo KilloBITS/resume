@@ -12,7 +12,7 @@ class RectsBtn extends React.Component {
       <div className="col-md-3 col-6 animated fadeInUp">
         <h4 className="item-1">
           <a href="#">
-            <span>Websites</span>
+            <span>Web Developmend</span>
           </a>
         </h4>
       </div>
@@ -21,7 +21,7 @@ class RectsBtn extends React.Component {
         <div className="col-md-3 col-6 animated fadeInUp">
           <h4 className="item-2">
             <a href="#">
-              <span>Desctop</span>
+              <span>Desktop development</span>
             </a>
           </h4>
         </div>
@@ -30,7 +30,7 @@ class RectsBtn extends React.Component {
         <div className="col-md-3 col-6 animated fadeInUp">
           <h4 className="item-3">
             <a href="#">
-              <span>E-Commerce</span>
+              <span>Design</span>
             </a>
           </h4>
         </div>
@@ -39,7 +39,7 @@ class RectsBtn extends React.Component {
         <div className="col-md-3 col-6 animated fadeInUp">
           <h4 className="item-4">
             <a href="#">
-              <span>Design</span>
+              <span>Support and update</span>
             </a>
           </h4>
         </div>
@@ -101,7 +101,7 @@ class ProgressBars extends React.Component {
         </div>
       </div>
       </Fade>
-      <Fade left>
+      <Fade right>
       <div className="progressLine">
         <span>jQuery</span>
         <div className="progressBar">

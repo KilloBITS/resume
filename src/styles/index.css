@@ -262,6 +262,7 @@ html {
   line-height: 40px;
   color: #90c05d;
   z-index: 1;
+  background-color: #343637;
 }
 
 .showedBtn{
@@ -333,7 +334,6 @@ html {
   z-index: -1;
   font-weight: bold;
   font-style: italic;
-  background-color: #1b1d1e;
   padding: 15px;
 }
 
@@ -1827,7 +1827,6 @@ main {
   margin-bottom: 20px;
   transition: border-radius 0.5s;
   cursor: pointer;
-  background-color: #2e1d2c;
 }
 
 .scroller .mouse .scroll-wheel {
@@ -1976,8 +1975,7 @@ main {
 
 /** aboutBlock **/
 .aboutBlock{
-  /* background-color: #000000; */
-  height: 700px;
+  height: auto;
   overflow: hidden;
 }
 
@@ -2009,6 +2007,7 @@ main {
   background-color: #ffffff;
   margin-top: 10px;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .centerLine:before{
@@ -2019,10 +2018,72 @@ main {
   border: 20px solid transparent;
   border-top-color: rgb(255, 255, 255);
   border-bottom: 0;
-  top: 100%;
+  bottom: -10px;
   left: 2px;
   transform: translate(-50%, 0);
 }
+
+.defaultTableTitle{
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translate(-50%, 0) rotate(3deg);
+  background-color: white;
+  padding: 12px 30px;
+  border-radius: 3px;
+}
+
+.hobbiesBlock{
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  width: fit-content;
+}
+
+.myHobbie{
+  top: 50%;
+  font-size: 40px;
+  display: inline-block;
+  padding: 20px;
+  border: 4px solid white;
+  border-radius: 60px;
+  background-color: #1b1d1e;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.myHobbie:nth-child(1){
+  color: white;
+}
+
+.myHobbie:nth-child(2){
+  color: white;
+}
+
+.myHobbie:nth-child(3){
+  color: white;
+}
+
+.myHobbie:nth-child(4){
+  color: white;
+}
+
+.myHobbie:nth-child(5){
+  color: white;
+}
+
+.myHobbie:nth-child(6){
+  color: white;
+}
+
+.myHobbie:nth-child(7){
+  color: white;
+}
+
+
 
 .aboutContent{
   width: calc(100% - 50px);
@@ -2243,18 +2304,23 @@ main {
   background-color: #ff6363;
   height: 100%;
   left: 0;
-  top: 0
+  top: 0;
+  background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-size: 40px 40px;
 }
 
 .progressBar .isProgress:before{
-  content: '';
+  content: ' ';
+  height: 0;
   position: absolute;
-  width: 100px;
-  height: 100px;
-  transform: rotate(15deg);
-  right: -10px;
-  background-color: #ff6363;
-  top: -50px;
+  width: 0;
+  border: 10px solid transparent;
+  border-left-color: rgb(255, 255, 255);
+  border-right: 0;
+  top: 50%;
+  right: -24px;
+  transform: translate(-50%, -50%);
 }
 
 .progressBar .isProgress:after{
@@ -2262,9 +2328,10 @@ main {
   position: absolute;
   width: 30px;
   height: 2px;
-  right: -20px;
+  right: -14px;
   background-color: white;
   top: 50%;
+  transform: translate(0, -50%);
 }
 
 /** blog block **/
@@ -2294,6 +2361,48 @@ main {
 .blodContentText{
   float: right;
   width: calc(100% - 90px);
+}
+
+
+
+#container{
+  position:absolute;
+  width: 100%;
+}
+
+article{
+  max-width: 300px;
+  position: absolute;
+  background-color: #1b1d1e;
+}
+
+.first{
+  top: 50%;
+  left: 31px;
+  color: #da3d3e;
+}
+
+.second{
+  left: 50%;
+  bottom: 0;
+  color: #0071bb;
+  transform: translate(-50%, 0);
+}
+
+.third{
+  right: 130px;
+  top: 40px;
+  color: #37b34a;
+}
+
+article{
+  font-family:'Lato', sans-serif;
+}
+article h2{
+  font-size:30px;
+  font-weight:900;
+  margin:0;
+  padding:0;
 }
 
 .floatLeftData .blodContentText{
@@ -2357,33 +2466,37 @@ main {
   margin-bottom: 100px;
 }
 
-.videoBlock video{
-  max-width: 900px;
+.videoBlock video {
+    max-width: 900px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.pauseVideo,.playVideo{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 46px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  transition: 0.3s;
 }
 
 .pauseVideo{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  background-color: red;
-  z-index: 1;
-  cursor: pointer;
   display: none;
+  opacity: 0;
 }
 
-.playVideo{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  background-color: green;
-  z-index: 1;
-  cursor: pointer;
+.videoBlock:hover .pauseVideo{
+  opacity: 1;
 }
 
 .defaultLine{
@@ -2393,6 +2506,81 @@ main {
   margin: 25px 0 45px 0;
   position: relative;
   z-index: -1;
+}
+
+.videoInfoLine{
+  position: absolute;
+  width: calc(100% - 4px);
+  left: 2px;
+  bottom: 6px;
+  background-color: rgba(0, 0, 0, 0.74);
+  height: 30px;
+  border-radius: 3px 3px 18px 18px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.videoBlock:hover .videoInfoLine{
+  opacity: 1;
+}
+
+.minVideoPlay,.minVideoPause{
+  position: absolute;
+  left: 18px;
+  top: 15px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  color: #eaeaea;
+}
+
+.fullvideoDisplay,.othersVideo{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  color: #eaeaea;
+}
+
+.fullvideoDisplay{
+  right: 34px;
+  top: 15px;
+}
+
+.othersVideo{
+  right: 12px;
+  top: 15px;
+}
+
+.minVideoPlay{
+
+}
+
+.minVideoPause{
+  display: none;
+}
+
+.videoTrackLine{
+  position: absolute;
+  left: 40px;
+  width: calc(100% - 110px);
+  height: 10px;
+  background-color: #5a5a5a;
+  top: 10px;
+}
+
+.videoTrackProcent{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: white;
 }
 
 .defaultLine span{

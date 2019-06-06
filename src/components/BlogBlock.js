@@ -4,7 +4,7 @@ import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const myVideo = require('../video/video.mp4');
-
+const VIDEO_BANNER = require('../images/VIDEO_BANNER.png')
 let parseImageReq = (url) => {
   return require('../images/'+url)
 }
@@ -39,7 +39,17 @@ class BlogContent extends React.Component{
   }
 }
 
+
+
 class BlogBlock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleLoad = videoPlayerScript.init;
+  }
+
+  componentDidMount() {
+    window.addEventListener('load', this.handleLoad);
+  }
   render() {
     return <div className="block blogBlock" id={this.props.id}>
     <div className="block_title">
@@ -52,9 +62,18 @@ class BlogBlock extends React.Component {
       <BlogContent blog={this.props.blog}/>
       <Fade bottom>
       <div className="videoBlock">
-        <div className="playVideo" onClick={ videoPlayerScript.play }></div>
-        <div className="pauseVideo" onClick={ videoPlayerScript.pause }></div>
-        <video src={myVideo} id="videoPlayerDOM"></video>
+        <div className="playVideo" onClick={ videoPlayerScript.play }><FontAwesomeIcon icon={['fas', 'play']} /></div>
+        <div className="pauseVideo" onClick={ videoPlayerScript.pause }><FontAwesomeIcon icon={['fas', 'pause']} /></div>
+        <div className="videoInfoLine">
+          <div className="minVideoPlay" onClick={ videoPlayerScript.play }><FontAwesomeIcon icon={['fas', 'play']} /></div>
+          <div className="minVideoPause" onClick={ videoPlayerScript.pause }><FontAwesomeIcon icon={['fas', 'pause']} /></div>
+          <div className="videoTrackLine" id="videoTrackLine">
+            <div className="videoTrackProcent" id="videoTrackProcent"></div>
+          </div>
+          <div className="fullvideoDisplay" onClick={videoPlayerScript.fullScreenVideo}><FontAwesomeIcon icon={['fas', 'arrows-alt']} /></div>
+          <div className="othersVideo"><FontAwesomeIcon icon={['fas', 'bars']} /></div>
+        </div>
+        <video src={myVideo} id="videoPlayerDOM" poster={VIDEO_BANNER}></video>
       </div>
       </Fade>
     </div>
