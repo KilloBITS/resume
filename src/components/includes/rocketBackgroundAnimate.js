@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 
 class BlockBackAnimate extends React.Component{
   render(){
-    return <div className="block">
+    return <div className="rockerblock">
 <div id="container">
 
 <svg version="1.1" id="animazione" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1200 557" enableBackground="new 0 0 1200 557" xmlSpace="preserve">
@@ -267,24 +267,6 @@ class BlockBackAnimate extends React.Component{
 	</g>
 </svg>
 
-<Fade left>
-<article className="first">
-<h2>1 Title of the article</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at pellentesque sapien. Proin iaculis nisi risus, nec gravida magna tristique nec. Phasellus ac egestas elit, nec interdum nisl. Aenean ipsum est, interdum a ex ut, ornare tristique felis. Duis non odio eget magna luctus dictum in ac sapien. </p>
-</article>
-</Fade>
-<Fade bottom>
-<article className="second">
-<h2>2 Title of the article</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at pellentesque sapien. Proin iaculis nisi risus, nec gravida magna tristique nec. Phasellus ac egestas elit, nec interdum nisl. Aenean ipsum est, interdum a ex ut, ornare tristique felis.</p>
-</article>
-</Fade>
-<Fade right>
-<article className="third">
-<h2>3 Title of the article</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at pellentesque sapien. Proin iaculis nisi risus, nec gravida magna tristique nec.</p>
-</article>
-</Fade>
 </div>
 </div>
   }

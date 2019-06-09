@@ -1,0 +1,148 @@
+@media screen and (max-width: 1335px) {
+  .projectsContainer{
+    width: calc(100% / 5 - 6px);
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .projectsContainer{
+    width: calc(100% / 4 - 6px);
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  main {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 29, 30, 0.76);
+  }
+  .absoluteImages{
+    display: none;
+  }
+  .Blobs_data{
+    display: none;
+  }
+  .navBar{
+    display: none;
+  }
+  .block {
+    width: calc(100% - 0px);
+    padding-left: 0px;
+    overflow: hidden;
+  }
+  .topmenu{
+    display: none;
+  }
+  .block.mainBlock .center_block h1 {
+    font-size: 26px;
+    white-space: nowrap;
+    padding-top: 10px;
+  }
+  .block.mainBlock .center_block h1:before {
+    font-size: 46px;
+    left: -30px;
+    bottom: -10px;
+  }
+  .block.mainBlock .center_block h1:after {
+    font-size: 46px;
+    right: -46px;
+    bottom: -10px;
+  }
+  .defaultLine span {
+    padding: 8px 10px;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  .progressLine {
+    width: calc(100% - 20px);
+  }
+  .rect_class{
+    display: none;
+  }
+  .progressBar {
+    border: 0px solid white;
+    background-color: #343637;
+  }
+  .defaultLine{
+    margin: 25px 0 15px 0;
+  }
+  .center_block h2{
+    margin: 5px;
+  }
+  .blogBlockData .blogMinImage{
+    display: none;
+  }
+  .blodContentText {
+    float: right;
+    width: 100%;
+  }
+  .blogMinTitle {
+    width: calc(100% - 0px);
+    font-size: 20px;
+  }
+  .blofMinText {
+    width: calc(100% - 0px);
+    padding-left: 20px;
+  }
+  .blogBlockData {
+    margin-bottom: 30px;
+    border-bottom: 1px solid white;
+    float: left;
+    padding-bottom: 30px;
+  }
+  .projectsBigBlock{
+    width: 100%;
+    max-width: 100%;
+  }
+  .videoBlock {
+    max-width: calc(100% - 30px);
+    margin-bottom: 65px;
+  }
+  .videoBlock video {
+    max-width: 100%;
+  }
+  .selevtVideo{
+    display: none;
+  }
+  .aboutBlockData p {
+    font-size: 11px;
+    width: 100%;
+    padding: 8px;
+    float: left;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  .aboutContent{
+    width: calc(100% - 32px);
+  }
+  .youTubeChannelBtn{
+    bottom: 15px;
+  }
+  .myHobbie {
+    font-size: 14px;
+    padding: 8px;
+    border: 2px solid white;
+    margin: 0px 2px;
+  }
+  .centerLine {
+    height: 285px;
+  }
+  .defaultTableTitle2{
+    top: 140px;
+  }
+  .block .block_title h1{
+    font-size: 18px;
+  }
+  .projectsContainer{
+    width: calc(100% / 1 - 6px);
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .projectsContainer{
+    width: calc(100% / 2 - 6px);
+  }
+}

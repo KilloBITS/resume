@@ -14,7 +14,7 @@ class AboutLeft extends React.Component {
         {this.props.text}
       </p>
       <Fade right>
-        <AbsoluteImage url="http://pluspng.com/img-png/satellite-png-image-40933-529.png" MW="250px" typePosition="left" left="calc(100% - 160px)" top="calc(100% - 10px)" dopClass="rectAnimImg"/>
+        <AbsoluteImage url="http://pngriver.com/wp-content/uploads/2018/04/Download-Satellite-PNG-Clipart.png" MW="250px" typePosition="left" left="calc(100% - 160px)" top="calc(100% - 10px)" dopClass="rectAnimImg"/>
       </Fade>
     </Fade>
     </div>
@@ -36,10 +36,13 @@ class PaperPlane extends React.Component {
 
 class AboutRight extends React.Component {
   render(){
-    return <Fade top>
-    <div className="aboutBlockData">
+    return <div className="aboutBlockData">
+      <Fade top>
       <div className="centerLine" />
-      <div className="defaultTableTitle">My Hobby</div>
+      </Fade>
+
+
+
       <div className="hobbiesBlock">
         <div className="myHobbie"><FontAwesomeIcon icon={['fas','drumstick-bite']} /></div>
         <div className="myHobbie"><FontAwesomeIcon icon={['fas','gamepad']} /></div>
@@ -49,8 +52,18 @@ class AboutRight extends React.Component {
         <div className="myHobbie"><FontAwesomeIcon icon={['fas','music']} /></div>
         <div className="myHobbie"><FontAwesomeIcon icon={['fas','feather-alt']} /></div>
       </div>
+
+      <div className="downloadableResume">
+        <div className="infoResume">
+          <div className="infoResumeSize">1.1MB</div>
+          <div className="infoResumeFormat">PDF</div>
+        </div>
+        <a href={'#'}>Download</a>
+      </div>
+
+      
     </div>
-    </Fade>
+
   }
 }
 

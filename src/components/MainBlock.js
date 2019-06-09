@@ -85,7 +85,6 @@ class MainBlock extends React.Component {
         clearTimeout(this.timeoutId);
     }
   }
-//
   render() {
     return <div className={this.state.show ? "block mainBlock loaded" : "block mainBlock"}  id="yakor_main">
       <div id="cloud-overlay"></div>

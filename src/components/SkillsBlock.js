@@ -1,6 +1,7 @@
 import React from 'react';
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
 import AbsoluteImage from './includes/absoluteImage.js';
 
 class RectsBtn extends React.Component {
@@ -12,7 +13,7 @@ class RectsBtn extends React.Component {
       <div className="col-md-3 col-6 animated fadeInUp">
         <h4 className="item-1">
           <a href="#">
-            <span>Web Developmend</span>
+            <span>Web Development</span>
           </a>
         </h4>
       </div>
@@ -55,9 +56,11 @@ class ProgressBars extends React.Component {
     <Fade left>
       <AbsoluteImage url="https://avatanplus.com/files/resources/mid/5845ade668b67158d02f4c1d.png" MW="450px" typePosition="left" left="-400px" top="-120px" dopClass="rectAnimImg"/>
     </Fade>
+      <Flip top>
       <div className="defaultLine">
         <span>Programs langs.</span>
       </div>
+      </Flip>
       <Fade left>
       <div className="progressLine">
         <span>Node.js</span>
@@ -90,9 +93,11 @@ class ProgressBars extends React.Component {
         </div>
       </div>
       </Fade>
+      <Flip top>
       <div className="defaultLine">
         <span>Freamworks and libs</span>
       </div>
+      </Flip>
       <Fade left>
       <div className="progressLine">
         <span>React</span>
@@ -141,9 +146,11 @@ class ProgressBars extends React.Component {
         </div>
       </div>
       </Fade>
+      <Flip top>
       <div className="defaultLine">
         <span>Syles</span>
       </div>
+      </Flip>
       <Fade left>
       <div className="progressLine">
         <span>CSS</span>
@@ -160,9 +167,11 @@ class ProgressBars extends React.Component {
         </div>
       </div>
       </Fade>
+      <Flip top>
       <div className="defaultLine">
         <span>Others</span>
       </div>
+      </Flip>
       <Fade left>
       <div className="progressLine">
         <span>Git</span>

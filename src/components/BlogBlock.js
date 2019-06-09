@@ -52,32 +52,37 @@ class BlogBlock extends React.Component {
   }
   render() {
     return <div className="block blogBlock" id={this.props.id}>
-    <div className="block_title">
-      <Bounce>
-        <h1 style={{color: "white"}} className="whiteBefore">Блог</h1>
-      </Bounce>
-      <div className="shadowTitle">Блог</div>
-    </div>
-    <div className="blogData">
-      <BlogContent blog={this.props.blog}/>
-      <Fade bottom>
-      <div className="videoBlock">
-        <div className="playVideo" onClick={ videoPlayerScript.play }><FontAwesomeIcon icon={['fas', 'play']} /></div>
-        <div className="pauseVideo" onClick={ videoPlayerScript.pause }><FontAwesomeIcon icon={['fas', 'pause']} /></div>
-        <div className="videoInfoLine">
-          <div className="minVideoPlay" onClick={ videoPlayerScript.play }><FontAwesomeIcon icon={['fas', 'play']} /></div>
-          <div className="minVideoPause" onClick={ videoPlayerScript.pause }><FontAwesomeIcon icon={['fas', 'pause']} /></div>
-          <div className="videoTrackLine" id="videoTrackLine">
-            <div className="videoTrackProcent" id="videoTrackProcent"></div>
-          </div>
-          <div className="fullvideoDisplay" onClick={videoPlayerScript.fullScreenVideo}><FontAwesomeIcon icon={['fas', 'arrows-alt']} /></div>
-          <div className="othersVideo"><FontAwesomeIcon icon={['fas', 'bars']} /></div>
-        </div>
-        <video src={myVideo} id="videoPlayerDOM" poster={VIDEO_BANNER}></video>
-      </div>
-      </Fade>
-    </div>
-    </div>
+              <div className="block_title">
+                <Bounce>
+                  <h1 style={{color: "white"}} className="whiteBefore">Блог</h1>
+                </Bounce>
+                <div className="shadowTitle">Блог</div>
+              </div>
+              <div className="blogData">
+                <BlogContent blog={this.props.blog}/>
+                <Bounce bottom>
+                <div className="myVideoBlog">
+                  <div className="videoBlock">
+                    <div className="playVideo" onClick={ videoPlayerScript.play }><FontAwesomeIcon icon={['fas', 'play']} /></div>
+                    <div className="pauseVideo" onClick={ videoPlayerScript.pause }><FontAwesomeIcon icon={['fas', 'pause']} /></div>
+                    <div className="videoInfoLine">
+                      <div className="minVideoPlay" onClick={ videoPlayerScript.play }><FontAwesomeIcon icon={['fas', 'play']} /></div>
+                      <div className="minVideoPause" onClick={ videoPlayerScript.pause }><FontAwesomeIcon icon={['fas', 'pause']} /></div>
+                      <div className="videoTrackLine" id="videoTrackLine">
+                        <div className="videoTrackProcent" id="videoTrackProcent"></div>
+                      </div>
+                      <div className="fullvideoDisplay" onClick={videoPlayerScript.fullScreenVideo}><FontAwesomeIcon icon={['fas', 'arrows-alt']} /></div>
+                      <div className="othersVideo"><FontAwesomeIcon icon={['fas', 'bars']} /></div>
+                    </div>
+                    <video src={myVideo} id="videoPlayerDOM" poster={VIDEO_BANNER}></video>
+                    <div className="selevtVideo prewVideo"></div>
+                    <div className="selevtVideo nextVideo"></div>
+                  </div>
+                </div>
+                </Bounce>
+                <div className="youTubeChannelBtn"><FontAwesomeIcon icon={['fab', 'youtube']} /> MY YOUTUBE CHANNEL</div>
+              </div>
+            </div>
   }
 }
 

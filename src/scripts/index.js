@@ -1,8 +1,5 @@
 let clearClassNavigator = (setClass) => {
   let navArr = document.getElementsByClassName('centerMinBtnBack');
-
-  console.log(navArr)
-
   for(let i = 0; i < navArr.length; i++){
       navArr[i].className = 'centerMinBtnBack';
   }
@@ -43,12 +40,8 @@ let handleScroll = () => {
     clearClassNavigator(4)
   }
 
-  if(document.getElementById('yakor_socials').offsetTop <= scrollBlock.getElementsByTagName('div')[0].scrollTop){
-    clearClassNavigator(5)
-  }
-
   if(document.getElementById('yakor_call').offsetTop <= scrollBlock.getElementsByTagName('div')[0].scrollTop){
-    clearClassNavigator(6)
+    clearClassNavigator(5)
   }
 
 
