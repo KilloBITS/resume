@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+const logotype = require('../../images/MyLogotype.png');
 class MobileMenuBtn extends React.Component{
   render(){
     return <div className="mobileMenuBtn" id="mobileMenuBtnFade" onClick={this.props.clickMethod}></div>
@@ -14,6 +14,9 @@ class NavigationBAR extends React.Component {
         <MobileMenuBtn clickMethod={this.props.functions.toggleMenu}/>
       </div>
       <div className="navCenter" id="navCenter">
+        <div className="menuLogotype" id="menuLogotype">
+          <img src={logotype} />
+        </div>
         <div className="centerMinBtnBack activeBarBtn">
           <FontAwesomeIcon icon={['fas', 'home']}/>
           <div className="openedMenuText">To main</div>

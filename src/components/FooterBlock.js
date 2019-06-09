@@ -4,9 +4,9 @@ import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 
 const position = [49.8418, 24.0313]
 const map = (
-  <Map center={position} zoom={13} id="map">
+  <Map center={position} zoom={6} id="map">
     <TileLayer
-      url="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i{z}!2i{x}!3i{y}!4i256!2m3!1e0!2sm!3i375060738!3m9!2spl!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0"
+      url="https://stamen-tiles-c.a.ssl.fastly.net/toner/{z}/{x}/{y}.png"
 
     />
     <Marker position={position}>

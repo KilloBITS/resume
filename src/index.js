@@ -31,6 +31,15 @@ class BodyContent extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      dataMenus: [
+        {name: 'Главная', title: 'Главная страница', id: 'mainPage'},
+        {name: 'Обо мне', title: 'Моя биография', id: 'aboutPage'},
+        {name: 'Навыки', title: 'Мои навыки', id: 'skillsPage'},
+        {name: 'Блог', title: 'Мой микроблог', id: 'blogPage'},
+        {name: 'Проекты', title: 'Мои проекты', id: 'projectsPage'},
+        {name: 'Связь', title: 'Связь со мной', id: 'callPage'},
+        {name: 'Резюме', title: 'Скачать резюме', id: 'downloadResume', color:'#ffb650'}
+      ],
       socials: {
         vk: 'https://vk.com/id203064133',
         insta: 'https://www.instagram.com/xx_kalinka_malinka_xx/',
@@ -125,7 +134,7 @@ class BodyContent extends React.Component {
       <div className={this.props.className}>
         <Preloader />
         <NavigationBAR functions={functions}/>
-        <MenuHead />
+        <MenuHead menu={this.state.dataMenus} />
         <MainBlock socials={this.state.socials} id="yakor_main"/>
         <AboutBlock text={this.state.aboutText} id="yakor_about"/>
         <SkillsBlock id="yakor_skills"/>
@@ -133,7 +142,7 @@ class BodyContent extends React.Component {
         <ProjectsBlock projects={this.state.projects} id="yakor_projects"/>
         <CallBlock socials={this.state.socials} contacts={this.state.contacts} id="yakor_call"/>
         <FooterBlock />
-        <OtherBlock />
+        <OtherBlock menu={this.state.dataMenus} />
     </div>)
   }
 }

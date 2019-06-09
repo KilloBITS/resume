@@ -31,7 +31,7 @@
   opacity: 1;
 }
 
-.menu_btn:before{
+.topmenu .menu_btn:before{
   content: '';
   position: absolute;
   width: calc(100% - 10px);
@@ -43,7 +43,7 @@
   opacity: 0;
 }
 
-.menu_btn:after{
+.topmenu .menu_btn:after{
   content: '';
   position: absolute;
   width: calc(100% - 10px);
