@@ -24,7 +24,6 @@ class ProjectsContainer extends React.Component {
                 <div className="projectsDate">{this.props.projects[i].date}</div>
                 <a href={this.props.projects[i].link} target="_blank">Open</a>
               </div>
-
               <div className={(this.props.projects[i].git === null)?"projectsGit hiden":"projectsGit" }><a href={this.props.projects[i].git}><FontAwesomeIcon icon={['fab', 'github']} /></a></div>
             </div>
           </div>
@@ -43,7 +42,6 @@ class ProjectsBlock extends React.Component {
         <h1 style={{color: "white"}} className="whiteBefore">Проекты</h1>
       </Bounce>
       <div className="shadowTitle">Проекты</div>
-
     </div>
     <div className="projectsBigBlock">
       <div className="projectsTypeBlock">
@@ -54,7 +52,6 @@ class ProjectsBlock extends React.Component {
       </div>
       <div className="projectsContainerData">
         <ProjectsContainer projects={this.props.projects} />
-
       </div>
       <a href={'https://github.com/KilloBITS'} target="_blank" className="gitHub_button"><FontAwesomeIcon icon={['fab', 'github']} /> My GitHub</a>
     </div>

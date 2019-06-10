@@ -2069,7 +2069,7 @@ main {
   width: 260px;
   border: 2px solid white;
   border-radius: 5px;
-  background-color: #fe6363;
+  background-color: #1b1d1e;
 }
 
 .infoResume{
@@ -2099,7 +2099,7 @@ a .downloadBtn{
   padding: 5px 0;
   text-align: center;
   cursor: pointer;
-  background-color: #a0cc97;
+  background-color: #1b1d1e;
   text-transform: uppercase;
   font-size: 16px;
 }
@@ -2905,7 +2905,7 @@ filter: grayscale(80%);
 
 .projectsContainer{
   margin: 8px 3px;
-  width: calc(100% / 6 - 6px);
+  width: calc(100% / 4 - 6px);
   display: inline-block;
   height: 220px;
   background: #3c3c3c;
