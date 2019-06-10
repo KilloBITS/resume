@@ -107,14 +107,14 @@ class CallsContacts extends React.Component{
         and ~let's talk.
         </div>
         <div className="contactsLineData">
-          <a href={"mailto:" + this.props.contacts.email}> {this.props.contacts.email} </a>
+          <a href={"mailto:" + this.props.contacts.email}> Email: {this.props.contacts.email} </a>
         </div>
         <div className="contactsLineData">
-          <a href={"tel:" + this.props.contacts.number}> {this.props.contacts.number} </a>
+          <a href={"tel:" + this.props.contacts.number}> Phone number: {this.props.contacts.number} </a>
         </div>
 
         <div className="contactsLineData">
-          {this.props.contacts.country},{this.props.contacts.city}
+          Address: {this.props.contacts.country},{this.props.contacts.city}
         </div>
 
       </div>

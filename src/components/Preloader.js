@@ -32,7 +32,7 @@ class Preloader extends React.Component {
   render() {
     return <div className={this.state.show ? "preloader_data loadedDataClass" : "preloader_data"} id="preloader_by_kalinuk">
       <div className="loaderLogoBack" id="loaderLogoBack">
-
+        {this.props.content}
       </div>
     </div>
   }

@@ -25,7 +25,9 @@ class BlogContent extends React.Component{
                 {blogData.title}
               </div>
               <div className="blofMinText">
+              <Fade top cascade>
               {blogData.text}
+              </Fade>
               </div>
             </div>
           </div>

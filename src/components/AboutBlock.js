@@ -13,6 +13,11 @@ class AboutLeft extends React.Component {
       <p>
         {this.props.text}
       </p>
+      <div className="opoenFullAbout">
+        <Fade top cascade>
+        Read completely
+        </Fade>
+      </div>
       <Fade right>
         <AbsoluteImage url="http://pngriver.com/wp-content/uploads/2018/04/Download-Satellite-PNG-Clipart.png" MW="250px" typePosition="left" left="calc(100% - 160px)" top="calc(100% - 10px)" dopClass="rectAnimImg"/>
       </Fade>
@@ -41,8 +46,6 @@ class AboutRight extends React.Component {
       <div className="centerLine" />
       </Fade>
 
-
-
       <div className="hobbiesBlock">
         <div className="myHobbie"><FontAwesomeIcon icon={['fas','drumstick-bite']} /></div>
         <div className="myHobbie"><FontAwesomeIcon icon={['fas','gamepad']} /></div>
@@ -55,13 +58,18 @@ class AboutRight extends React.Component {
 
       <div className="downloadableResume">
         <div className="infoResume">
-          <div className="infoResumeSize">1.1MB</div>
-          <div className="infoResumeFormat">PDF</div>
+          <div className="infoResumeSize">File size: 1.1MB</div>
+          <div className="infoResumeFormat">Format file: PDF</div>
         </div>
-        <a href={'#'}>Download</a>
+        <a href={'#'}>
+          <div className="downloadBtn">
+            <FontAwesomeIcon icon={['fas','file-download']} />
+            <span>download</span>
+          </div>
+        </a>
       </div>
 
-      
+
     </div>
 
   }

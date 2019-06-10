@@ -2033,9 +2033,13 @@ main {
   white-space: pre-line;
 }
 
+.opoenFullAbout{
+  display: none;
+}
+
 .centerLine{
   width: 4px;
-  height: 350px;
+  height: 220px;
   margin: auto;
   background-color: #ffffff;
   margin-top: 3px;
@@ -2070,7 +2074,7 @@ main {
 
 .infoResume{
   float: left;
-  width: 50%;
+  width: 100%;
   padding: 5px 10px;
   text-align: center;
   color: white;
@@ -2082,16 +2086,31 @@ main {
 }
 
 .downloadableResume a{
-  position: absolute;
   right: 20px;
   top: 12px;
   font-size: 20px;
   color: white;
 }
 
+a .downloadBtn{
+  float: left;
+  width: 100%;
+  border-top: 2px solid;
+  padding: 5px 0;
+  text-align: center;
+  cursor: pointer;
+  background-color: #a0cc97;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+a .downloadBtn span{
+  padding-left: 10px;
+}
+
 .hobbiesBlock{
   position: absolute;
-  top: 80px;
+  top: -15px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 1;
@@ -2110,22 +2129,6 @@ main {
   cursor: pointer;
   position: relative;
   transition: 0.3s;
-}
-
-.myHobbie:before{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 3px;
-  height: 80px;
-  content: '';
-  z-index: 1;
-  background-color: white;
-  bottom: calc(100% + 3px);
-}
-
-.myHobbie:nth-child(4):before{
-  display: none;
 }
 
 .myHobbie:nth-child(1){
@@ -3168,7 +3171,6 @@ filter: grayscale(80%);
   margin-bottom: 50px;
   padding-bottom: 30px;
   border-bottom: 1px solid #b46464;
-  text-shadow: 1px 1px 0px #b46464;
   text-transform: uppercase;
   letter-spacing: 0px;
 }
@@ -3194,7 +3196,7 @@ filter: grayscale(80%);
   position: absolute;
   top: -5px;
   width: 100%;
-  z-index: 1001;
+  z-index: 1005;
 }
 
 .block.footer:after {
@@ -3208,7 +3210,7 @@ filter: grayscale(80%);
   position: absolute;
   bottom: -5px;
   width: 100%;
-  z-index: 1001;
+  z-index: 1005;
   transform: rotate(180deg);
 }
 
@@ -3291,6 +3293,23 @@ filter: grayscale(80%);
 
 .footerLogotype img{
 
+}
+
+.othersLineData{
+  color: white;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.otherContent .socialsContacts{
+  color: white;
+  font-size: 18px;
+  text-align: right;
+}
+
+.otherContent .socialsContacts .socials_mini_icon{
+  display: inline-block;
+  margin: 3px;
 }
 
 

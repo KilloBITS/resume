@@ -23,8 +23,30 @@
   .Blobs_data{
     display: none;
   }
+  .myHobbie:before{
+    height: 30px;
+  }
   .navBar{
+    width: 0;
+  }
+  .navCenter.openedMenu .menuLogotype img {
+    max-width: 210px;
+  }
+  .navBar .navCenter.openedMenu .centerMinBtnBack svg{
     display: none;
+  }
+  .navCenter.openedMenu .openedMenuText {
+    width: calc(100%);
+    text-transform: uppercase;
+  }
+  .navCenter{
+    /* display: none; */
+  }
+  .mobileMenuBtnFade{
+    pointer-events: all;
+  }
+  .mobileMenuBtnFade{
+    opacity: 1;
   }
   .block {
     width: calc(100% - 0px);
@@ -38,6 +60,14 @@
     font-size: 26px;
     white-space: nowrap;
     padding-top: 10px;
+  }
+  .footer .mobileTotopBtnOther{
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+  }
+  .hobbiesBlock{
+    top: 20px;
   }
   .block.mainBlock .center_block h1:before {
     font-size: 46px;
@@ -113,6 +143,37 @@
     border: 0;
     box-shadow: none;
     padding: 0;
+    height: 300px;
+    overflow: hidden;
+    border: 2px solid white;
+    border-bottom: 0;
+    padding: 10px;
+  }
+
+  .aboutBlockData p::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    background-image: linear-gradient(to top, rgb(27, 29, 30) 30%, rgba(27, 29, 30, 0.17) 85%);
+    left: 0;
+    border-bottom: 2px solid white;
+  }
+  .opoenFullAbout{
+    display: block;
+    position: absolute;
+    height: 40px;
+    bottom: 15px;
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    background-image: linear-gradient(to top, #1b1d1e 30%, #1b1d1e 85%);
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 2px solid white;
+    left: calc(50% - 100px);
+    width: 200px;
   }
   .aboutContent{
     width: calc(100% - 32px);
@@ -121,13 +182,28 @@
     bottom: 15px;
   }
   .myHobbie {
-    font-size: 14px;
+    font-size: 20px;
     padding: 8px;
     border: 2px solid white;
     margin: 0px 2px;
   }
   .centerLine {
-    height: 285px;
+    width: 2px;
+    height: 190px;
+    margin-top: 0px;
+  }
+  .downloadableResume{
+    bottom: 40px;
+  }
+  .pauseVideo, .playVideo {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 28px;
+    border-radius: 10px;
+  }
+  .callData .callDataBlock{
+    width: 100%;
   }
   .defaultTableTitle2{
     top: 140px;
@@ -138,7 +214,48 @@
   .projectsContainer{
     width: calc(100% / 1 - 6px);
   }
+  .getContacts{
+    margin: auto;
+  }
+  .contactsLines .contactsLineData.text{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  .contactsLines{
+    text-align: center;
+  }
+  .contactsLines .contactsLineData {
+    text-align: center;
+  }
+  .socialsContacts{
+    text-align: center;
+  }
+  .contactMessageForm{
+    width: calc(100% - 10px);
+    margin: auto;
+  }
+  .callData .submitBtn,.callData .clearBtn{
+    width: calc(50% - 5px);
+  }
+  .otherDataBlockFoot {
+    width: calc(100% - 10px);
+  }
+  .otherDataBlockFoot .otherContent {
+    width: 50%;
+  }
+  .otherDataBlockFoot .otherContent.otherCenter {
+    width: 100%;
+  }
+  .otherContent .menu_btn {
+    padding-left: 16px;
+  }
 
+  .otherCenter .toTopClicker{
+    display: none;
+  }
+  .footerLogotype{
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 700px) {

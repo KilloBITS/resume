@@ -142,7 +142,7 @@ class BodyContent extends React.Component {
         <ProjectsBlock projects={this.state.projects} id="yakor_projects"/>
         <CallBlock socials={this.state.socials} contacts={this.state.contacts} id="yakor_call"/>
         <FooterBlock />
-        <OtherBlock menu={this.state.dataMenus} />
+        <OtherBlock menu={this.state.dataMenus} contacts={this.state.contacts} socials={this.state.socials}/>
     </div>)
   }
 }
@@ -150,7 +150,7 @@ class BodyContent extends React.Component {
 
 
 ReactDOM.render(
-  <Scrollbars onScroll={handleScroll} style={{ height: "calc(100%)" }} renderThumbVertical={props => <div className="thumb-vertical"/>} id="scrollBlock" >
+  <Scrollbars onScroll={handleScroll}  style={{ height: "calc(100%)" }} renderThumbVertical={props => <div className="thumb-vertical"/>} id="scrollBlock" >
     <BodyContent className="contentData" />
   </Scrollbars>,
   document.getElementById('root')

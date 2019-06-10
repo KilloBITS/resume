@@ -5,7 +5,11 @@ let functions = {
       document.getElementById('navCenter').className = 'navCenter openedMenu';
       functions.toggleMenuBool = true;
     }else{
-      document.getElementById('navBar').style.width = "28px";
+      if(document.body.offsetWidth > 800){
+        document.getElementById('navBar').style.width = "28px";
+      }else{
+        document.getElementById('navBar').style.width = "0px";
+      }
       document.getElementById('navCenter').className = 'navCenter';
       functions.toggleMenuBool = false
     }
