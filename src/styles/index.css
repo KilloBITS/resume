@@ -2031,6 +2031,7 @@ main {
   margin: auto;
   box-shadow: 0px 0px 0px 4px #ffffff, 0px 0px 0px 20px #1b1d1e;
   white-space: pre-line;
+  padding-bottom: 65px;
 }
 
 .opoenFullAbout{
@@ -2110,7 +2111,7 @@ a .downloadBtn span{
 
 .hobbiesBlock{
   position: absolute;
-  top: -15px;
+  top: -40px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 1;
@@ -2891,13 +2892,20 @@ filter: grayscale(80%);
   text-transform: uppercase;
   border: 2px solid white;
   margin: 4px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .projTypeBtn.activeTypeProj{
-  color: #fe6363;
-  border-color: #fe6363;
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #fe8e8e;
 }
 
+.projTypeBtn.activeTypeProj::before{
+  content: '';
+  position: absolute;
+}
 
 .projectsContainerData{
     width: 100%;
