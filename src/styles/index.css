@@ -2114,7 +2114,7 @@ a .downloadBtn span{
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 1;
-  width: fit-content;
+  width: max-content;
 }
 
 .myHobbie{
