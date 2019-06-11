@@ -197,9 +197,9 @@ class SkillsBlock extends React.Component {
     return <div className="block skillsBlock" id={this.props.id}>
       <div className="block_title">
         <Bounce>
-          <h1 style={{color: "white"}} className="whiteBefore">Навыки и технологии</h1>
+          <h1 style={{color: "white"}} className="whiteBefore">Skills and technology</h1>
         </Bounce>
-        <div className="shadowTitle">Навыки и технологии</div>
+        <div className="shadowTitle">Skills and technology</div>
       </div>
       <RectsBtn />
       <ProgressBars/>

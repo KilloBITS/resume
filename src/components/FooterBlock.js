@@ -5,7 +5,7 @@ import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 
 const position = [49.8418, 24.0313]
 const map = (
-  <Map center={position} zoom={6} id="map">
+  <Map center={position}  scrollWheelZoom={false} zoom={6} id="map">
     <TileLayer
       url="https://stamen-tiles-c.a.ssl.fastly.net/toner/{z}/{x}/{y}.png"
 

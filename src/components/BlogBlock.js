@@ -56,9 +56,9 @@ class BlogBlock extends React.Component {
     return <div className="block blogBlock" id={this.props.id}>
               <div className="block_title">
                 <Bounce>
-                  <h1 style={{color: "white"}} className="whiteBefore">Блог</h1>
+                  <h1 style={{color: "white"}} className="whiteBefore">My Blog</h1>
                 </Bounce>
-                <div className="shadowTitle">Блог</div>
+                <div className="shadowTitle">My Blog</div>
               </div>
               <div className="blogData">
                 <BlogContent blog={this.props.blog}/>

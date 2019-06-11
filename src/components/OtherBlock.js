@@ -3,9 +3,14 @@ import functions from '../scripts/functions.js';
 import Bounce from 'react-reveal/Bounce';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const footerLogo = require('../images/MyLogotype.png');
-let parseMenu = (dataMenu) => {
-  const menuBtn = dataMenu.map((comp, key) => <div key={key} className="menu_btn" style={{color: (comp.color !== undefined)?comp.color: 'white' }} def-title={comp.title}>{comp.name}</div>);
-  return menuBtn
+
+let parseMenu = (dataMenu, m) => {
+  if(m){
+    const menuBtn = dataMenu.map((comp, key) => <div key={key} className="menu_btn" style={{color: (comp.color !== undefined)?comp.color: 'white' }} id={comp.id} def-title={comp.title}>{comp.name}</div>);
+    return menuBtn
+  }else{
+    return <div className="menu_btn">No data found</div>
+  }
 }
 
 class OtherBlock extends React.Component {
@@ -20,7 +25,7 @@ class OtherBlock extends React.Component {
     return <div className="block otherBlock" id="oyakor_other">
       <div className="otherDataBlockFoot">
         <div className="otherContent">
-          {parseMenu(this.props.menu)}
+          {(this.props.menu !== 0)?parseMenu(this.props.menu, true):parseMenu(0, false)}
         </div>
         <div className="otherContent otherCenter">
           <div className="toTopClicker">

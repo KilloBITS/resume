@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AbsoluteImage from './includes/absoluteImage.js';
 
+
 class AboutLeft extends React.Component {
   render(){
     return <div className="aboutBlockData">
@@ -61,7 +62,7 @@ class AboutRight extends React.Component {
           <div className="infoResumeSize">File size: 1.1MB</div>
           <div className="infoResumeFormat">Format file: PDF</div>
         </div>
-        <a href={'#'}>
+        <a href={this.props.resume} target="_blank">
           <div className="downloadBtn">
             <FontAwesomeIcon icon={['fas','file-download']} />
             <span>download</span>
@@ -80,14 +81,14 @@ class AboutBlock extends React.Component {
     return <div className="block aboutBlock" id={this.props.id}>
       <div className="block_title">
         <Bounce>
-          <h1 style={{color: "white"}} className="whiteBefore">Обо мне</h1>
+          <h1 style={{color: "white"}} className="whiteBefore">About</h1>
         </Bounce>
-        <div className="shadowTitle">Обо мне</div>
+        <div className="shadowTitle">About</div>
       </div>
       <div className="aboutContent">
         <div className="centerBlock">
           <AboutLeft text={this.props.text} />
-          <AboutRight />
+          <AboutRight resume={this.props.resume}/>
         </div>
       </div>
     </div>

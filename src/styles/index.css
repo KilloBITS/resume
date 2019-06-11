@@ -270,15 +270,55 @@ html {
 
 }
 
-.navBar .navCenter .centerMinBtnBack{
+.navBar .navCenter .centerMinBtnBack, .navBar .navCenter .centerMinBtnBack1{
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navBar .navCenter .centerMinBtnBack1{
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid white;
+}
+
+.navBar .navCenter .centerMinBtnBack.navBtnResume{
   width: 100%;
   margin-bottom: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
+.navBar .navCenter.openedMenu .centerMinBtnBack1 {
+    width: 300px;
+    margin: auto;
+    font-size: 34px;
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+.navBar .navCenter.openedMenu .centerMinBtnBack1 svg {
+    width: 30px;
+    text-align: center;
+    float: left;
+}
 
 .openedMenuText{
   display: none;
+}
+
+.navBar .navCenter:not(.openedMenu) .centerMinBtnBack:hover .openedMenuText{
+  display: block;
+  position: absolute;
+  right: 100%;
+  white-space: nowrap;
+  text-align: right;
+  top: -14px;
+  background-color: #1b1d1e;
+  padding: 3px 10px;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
 }
 
 .navBar .navCenter.openedMenu  .centerMinBtnBack{
@@ -287,6 +327,14 @@ html {
   font-size: 34px;
   margin-bottom: 10px;
   height: 40px;
+}
+
+.navBar .navCenter.openedMenu .centerMinBtnBack.activeBarBtn {
+    color: white;
+}
+
+.navBar .navCenter.openedMenu .centerMinBtnBack:hover{
+  color: #ff3737;
 }
 
 .navBar .navCenter.openedMenu  .centerMinBtnBack svg{
@@ -504,8 +552,24 @@ html {
   width: 24px;
 }
 
-.block.mainBlock .center_block .socialsLineMini .socials_mini_icon:hover{
-  opacity: 1;
+.block.mainBlock .center_block .socialsLineMini .socials_mini_icon:nth-child(1):hover{
+  color: blue;
+}
+
+.block.mainBlock .center_block .socialsLineMini .socials_mini_icon:nth-child(2):hover{
+  color: yellow;
+}
+
+.block.mainBlock .center_block .socialsLineMini .socials_mini_icon:nth-child(3):hover{
+  color: lightblue;
+}
+
+.block.mainBlock .center_block .socialsLineMini .socials_mini_icon:nth-child(4):hover{
+  color: violet;
+}
+
+.block.mainBlock .center_block .socialsLineMini .socials_mini_icon:nth-child(5):hover{
+  color: silver;
 }
 
 .mainBlock:after,.mainBlock:before{
@@ -2123,16 +2187,17 @@ a .downloadBtn span{
   font-size: 40px;
   display: inline-block;
   padding: 20px;
-  border: 3px solid white;
   border-radius: 60px;
   background-color: #1b1d1e;
   margin: 0px 10px;
   cursor: pointer;
   position: relative;
   transition: 0.3s;
+  background-color: white;
+  color: black;
 }
 
-.myHobbie:nth-child(1){
+/* .myHobbie:nth-child(1){
   color: white;
 }
 
@@ -2158,48 +2223,41 @@ a .downloadBtn span{
 
 .myHobbie:nth-child(7){
   color: white;
-}
+} */
 
 .myHobbie:nth-child(1):hover{
   color: #ad0000;
-  border-color: #ad0000;
-  background-color: #343637;
+  /* background-color: #343637; */
 }
 
 .myHobbie:nth-child(2):hover{
   color: #9373ff;
-  border-color: #9373ff;
-  background-color: #343637;
+  /* background-color: #343637; */
 }
 
 .myHobbie:nth-child(3):hover{
   color: #0ead00;
-  border-color: #0ead00;
-  background-color: #343637;
+  /* background-color: #343637; */
 }
 
 .myHobbie:nth-child(4):hover{
   color: #ff5454;
-  border-color: #ff5454;
-  background-color: #343637;
+  /* background-color: #343637; */
 }
 
 .myHobbie:nth-child(5):hover{
   color: #fff200;
-  border-color: #fff200;
-  background-color: #343637;
+  /* background-color: #343637; */
 }
 
 .myHobbie:nth-child(6):hover{
   color: #00a8ad;
-  border-color: #00a8ad;
-  background-color: #343637;
+  /* background-color: #343637; */
 }
 
 .myHobbie:nth-child(7):hover{
   color: #af00b6;
-  border-color: #af00b6;
-  background-color: #343637;
+  /* background-color: #343637; */
 }
 
 
@@ -2438,6 +2496,10 @@ a .downloadBtn span{
   background-position: 0 calc(100% + 1px);
   background-size: contain;
   height: fit-content;
+  background-image: url(https://freepngimg.com/thumb/universe/33623-5-asteroid-photos.png);
+  background-position: calc(100% + 150px) 0;
+  background-repeat: no-repeat;
+  background-size: 400px;
 }
 
 .blogData{
@@ -3320,6 +3382,52 @@ filter: grayscale(80%);
   margin: 3px;
 }
 
+.pointer{
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  color: white;
+  z-index: 1;
+  padding: 10px 25px;
+  border: 1px solid white;
+}
+
+.pointer:before{
+  content: '';
+  position: absolute;
+  left: -1px;
+  width: 1px;
+  height: 120px;
+  background-color: white;
+  top: 100%;
+  transform: rotate(15deg);
+}
+
+#cloud-overlay{
+  overflow: hidden;
+}
+
+#cloud-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient( rgb(27, 29, 30) 0px, rgba(0,0,0,0) 2px, rgba(27, 29, 30, 0.37) 3px );
+  background-size: 100% 4px;
+  animation: .43s interference infinite ease-in-out alternate;
+  transform-origin: 0 0%;
+  z-index: 1;
+}
+
+
+@keyframes interference {
+  to {
+    transform-origin:0 100%;
+    transform: scale(1.15)
+  }
+}
 
 .hiden{
   display: none;

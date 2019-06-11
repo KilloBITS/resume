@@ -41,6 +41,14 @@ class NavigationBAR extends React.Component {
           <FontAwesomeIcon icon={['fas', 'paper-plane']}/>
           <div className="openedMenuText">Contacts</div>
         </div>
+
+        <div className="centerMinBtnBack1 navBtnResume">
+          <a href={this.props.resume} target="_blank">
+            <FontAwesomeIcon icon={['fas', 'file-download']}/>
+            <div className="openedMenuText">Resume</div>
+          </a>
+        </div>
+
       </div>
       <div className="navBottom"></div>
     </div>

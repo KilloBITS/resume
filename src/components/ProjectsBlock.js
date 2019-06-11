@@ -39,9 +39,9 @@ class ProjectsBlock extends React.Component {
     return <div className="block projectsBlock" id={this.props.id}>
     <div className="block_title">
       <Bounce>
-        <h1 style={{color: "white"}} className="whiteBefore">Проекты</h1>
+        <h1 style={{color: "white"}} className="whiteBefore">Projects</h1>
       </Bounce>
-      <div className="shadowTitle">Проекты</div>
+      <div className="shadowTitle">Projects</div>
     </div>
     <div className="projectsBigBlock">
       <div className="projectsTypeBlock">
