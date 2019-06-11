@@ -6,6 +6,13 @@ let parseImageReq = (url) => {
   return require('../images/projects/'+url)
 }
 
+class ProjTech extends React.Component {
+  render(){
+    const ptData = this.props.pt.map((comp, key) => <div key={key} className="projTech">{this.props.pt[key]}</div>);
+    return ptData
+  }
+}
+
 class ProjectsContainer extends React.Component {
   render(){
     let projectsArray = [];
@@ -14,7 +21,7 @@ class ProjectsContainer extends React.Component {
         <Bounce key={i}>
           <div className="projectsContainer">
             <div className="projectsBackground">
-              <img src={parseImageReq(this.props.projects[i].image)} />
+              <img src={(this.props.projects[i].image !== null)?parseImageReq(this.props.projects[i].image):parseImageReq('no-image-found-360x260.png')} />
             </div>
             <div className={(this.props.projects[i].status)?"OnlineProjectsTrue":"hiden"}></div>
             <div className="projectsTitle">
@@ -25,6 +32,10 @@ class ProjectsContainer extends React.Component {
                 <a href={this.props.projects[i].link} target="_blank">Open</a>
               </div>
               <div className={(this.props.projects[i].git === null)?"projectsGit hiden":"projectsGit" }><a href={this.props.projects[i].git}><FontAwesomeIcon icon={['fab', 'github']} /></a></div>
+            </div>
+
+            <div className="projectsTechnologies">
+              <ProjTech pt={this.props.projects[i].tech} />
             </div>
           </div>
         </Bounce>

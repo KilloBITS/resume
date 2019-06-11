@@ -2981,9 +2981,51 @@ filter: grayscale(80%);
   background: #3c3c3c;
   border-radius: 3px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   border: 3px solid black;
   cursor: pointer;
+}
+
+.projectsTechnologies{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background-color: white;
+  width: calc(100% - 20px);
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.projectsTechnologies::before {
+    top: 100%;
+    background: linear-gradient(-135deg, #fff 6px, transparent 0), linear-gradient(135deg, #fff 6px, transparent 0);
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 12px;
+    background-repeat: repeat-x;
+    background-size: 12px 12px;
+    background-position: left bottom;
+}
+
+.projectsTechnologies::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -2px;
+  width: calc(100% + 4px);
+  border-radius: 3px;
+  height: 15px;
+  box-shadow: inset 0px 8px 7px 3px #222;
+}
+
+.projectsTechnologies .projTech{
+  color: black;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(61, 18, 178, 0.33);
+  font-family: cursive;
 }
 
 .projectsBackground{
@@ -3128,6 +3170,8 @@ filter: grayscale(80%);
 
 .projectsContainer:hover{
   box-shadow: 0px 0px 7px 0px #0d0e0f;
+  z-index: 10;
+  position: relative;
 }
 
 .projectsContainer:hover .projectsTitle{
@@ -3145,6 +3189,11 @@ filter: grayscale(80%);
 .projectsContainer:hover .projectsTitleRotate a{
     opacity: 1;
     pointer-events: all;
+}
+
+.projectsContainer:hover .projectsTechnologies{
+  top: 100%;
+
 }
 
 /** callbackBlock **/
@@ -3287,6 +3336,7 @@ filter: grayscale(80%);
 #map{
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 

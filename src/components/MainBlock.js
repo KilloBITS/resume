@@ -7,7 +7,7 @@ import Pointer from './includes/head_pointers.js';
 class MainBlockContent extends React.Component {
   render() {
     return <div className="center_block" id="mainCenter">
-      <Bounce><h1 id="myName">Ihor Kalenyuk</h1></Bounce>
+      <Bounce><h1 id="myName">Ihor Kaleniuk</h1></Bounce>
       <h2 className="mainBlockInfoMini">WEB</h2><h2 className="mainBlockInfoMini">DEVELOPER.</h2><h2 className="mainBlockInfoMini">TECHNOLOGY ENTHUSIAST.</h2>
       <div className="socialsLineMini">
         <Bounce><div className="socials_mini_icon"><a href={this.props.socials.vk}><FontAwesomeIcon icon={['fab', 'vk']} /></a></div></Bounce>

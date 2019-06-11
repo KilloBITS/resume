@@ -6,18 +6,33 @@ import AbsoluteImage from './includes/absoluteImage.js';
 
 
 class AboutLeft extends React.Component {
+  constructor(props){
+    super(props)
+  }
+  componentDidMount () {
+    this.toggleAboutText = () => {
+      let aboutBlockData = document.getElementById('aboutBlockData');
+      let opoenFullAbout = document.getElementById('opoenFullAbout');
+
+      if(aboutBlockData.className === 'aboutBlockData'){
+        aboutBlockData.className = 'aboutBlockData openAbout';
+        opoenFullAbout.innerHTML = 'roll up';
+      }else{
+        aboutBlockData.className = 'aboutBlockData';
+        opoenFullAbout.innerHTML = 'Read completely';
+      }
+    }
+  }
   render(){
-    return <div className="aboutBlockData">
+    return <div className="aboutBlockData" id="aboutBlockData">
     <Fade right>
     <div className="rect_class rect_1"></div>
     <div className="rect_class rect_2"></div>
       <p>
         {this.props.text}
       </p>
-      <div className="opoenFullAbout">
-        <Fade top cascade>
+      <div className="opoenFullAbout" id="opoenFullAbout" onClick={this.toggleAboutText}>
         Read completely
-        </Fade>
       </div>
       <Fade right>
         <AbsoluteImage url="http://pngriver.com/wp-content/uploads/2018/04/Download-Satellite-PNG-Clipart.png" MW="250px" typePosition="left" left="calc(100% - 160px)" top="calc(100% - 10px)" dopClass="rectAnimImg"/>

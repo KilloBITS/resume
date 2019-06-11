@@ -1,6 +1,7 @@
 import './styles/preloader.css';
 import './styles/index.css';
 import './styles/index.adaptive.css';
+
 import handleScroll from './scripts/index.js';
 import functions from './scripts/functions.js';
 
@@ -47,11 +48,11 @@ class BodyContent extends React.Component {
     }
   }
   componentDidMount() {
-    window.addEventListener('load', this.blockLoad);
-    window.addEventListener('resize', this.blockLoad);
     axios.post('http://localhost:5000/getData').then(res => {
        this.setState(res.data.data);
        this.setState({blockLoad: functions.init});
+       window.addEventListener('load', functions.init);
+       window.addEventListener('resize', functions.init);
     });
   }
 
