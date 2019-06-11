@@ -421,6 +421,7 @@ html {
   margin: 0;
   padding: 45px 0;
   width: fit-content;
+  width: -moz-fit-content;
   margin: auto;
   position: relative;
   text-transform: uppercase;
@@ -2400,6 +2401,7 @@ a .downloadBtn span{
 .Blobs_data{
   margin: auto;
   width: fit-content;
+  width: -moz-fit-content;
 }
 /** skillsBlock **/
 
@@ -2496,6 +2498,7 @@ a .downloadBtn span{
   background-position: 0 calc(100% + 1px);
   background-size: contain;
   height: fit-content;
+  height: -moz-fit-content;
   background-image: url(https://freepngimg.com/thumb/universe/33623-5-asteroid-photos.png);
   background-position: calc(100% + 150px) 0;
   background-repeat: no-repeat;
@@ -2619,15 +2622,17 @@ article h2{
 
 .myVideoBlog{
   display: block;
+  padding-bottom: 100px;
 }
 .videoBlock{
   margin-top: 110px;
   text-align: center;
   border-radius: 12px 12px 12px 12px;
   width: fit-content;
+  width: -moz-fit-content;
   position: relative;
   margin: auto;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   height: auto;
   display: grid;
 }
@@ -2918,6 +2923,7 @@ filter: grayscale(80%);
   background-size: contain;
   background-position: 0 calc(0% - 1px);
   height: fit-content;
+  height: -moz-fit-content;
 }
 
 .projectsBigBlock{
