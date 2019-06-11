@@ -64,11 +64,11 @@ let GlobalDataEN = {
       status: true,
       title: 'My Portfolio',
       desc: 'My web portfolio and resume',
-      link: 'http://kaleniuk.top',
+      link: 'http://kaleniuk.top/',
       git: 'https://github.com/KilloBITS/resume',
       date: '10.06.2019',
       image: 'portfolio.png',
-      tech: ["React"]
+      tech: ["React","Node.js","Express"]
     },
     {
       status: true,
