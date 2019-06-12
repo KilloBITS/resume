@@ -4,7 +4,6 @@ import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AbsoluteImage from './includes/absoluteImage.js';
 
-
 class AboutLeft extends React.Component {
   constructor(props){
     super(props)
@@ -61,7 +60,6 @@ class AboutRight extends React.Component {
       <Fade top>
       <div className="centerLine" />
       </Fade>
-
       <div className="hobbiesBlock">
         <div className="myHobbie"><FontAwesomeIcon icon={['fas','drumstick-bite']} /></div>
         <div className="myHobbie"><FontAwesomeIcon icon={['fas','gamepad']} /></div>
@@ -71,23 +69,15 @@ class AboutRight extends React.Component {
         <div className="myHobbie"><FontAwesomeIcon icon={['fas','music']} /></div>
         <div className="myHobbie"><FontAwesomeIcon icon={['fas','feather-alt']} /></div>
       </div>
-
       <div className="downloadableResume">
-        <div className="infoResume">
-          <div className="infoResumeSize">File size: 1.1MB</div>
-          <div className="infoResumeFormat">Format file: PDF</div>
-        </div>
         <a href={this.props.resume} target="_blank">
           <div className="downloadBtn">
             <FontAwesomeIcon icon={['fas','file-download']} />
-            <span>download</span>
+            <span>download resume (PDF)</span>
           </div>
         </a>
       </div>
-
-
     </div>
-
   }
 }
 

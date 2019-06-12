@@ -12,6 +12,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 import MenuHead from './components/includes/HeadMenu.js';
 import NavigationBAR from './components/includes/NavigationBAR.js';
+import Modal from './components/includes/modal.js';
 import Preloader from './components/Preloader.js';
 import MainBlock from './components/MainBlock.js';
 import AboutBlock from './components/AboutBlock.js';
@@ -70,6 +71,7 @@ class BodyContent extends React.Component {
          <CallBlock socials={this.state.socials} contacts={this.state.contacts} id="yakor_call"/>
          <FooterBlock />
          <OtherBlock menu={this.state.dataMenus} contacts={this.state.contacts} socials={this.state.socials} />
+         <Modal />
      </div>)
   }
 }
