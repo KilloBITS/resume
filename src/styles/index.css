@@ -3483,6 +3483,7 @@ filter: grayscale(80%);
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
+  display: none;
 }
 
 .modalContent{
@@ -3494,6 +3495,12 @@ filter: grayscale(80%);
   border-radius: 0px;
   padding: 8px;
   box-shadow: 0 0 0px 13px #070708, 0px 0px 0px 15px white;
+}
+
+.modalTitle{
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .modalContentBack{

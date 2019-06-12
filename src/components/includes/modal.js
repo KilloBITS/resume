@@ -6,15 +6,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Modal extends React.Component{
   constructor(props){
     super(props);
+    this.modalOpened = false;
     this.closeModal = () => {
-
+      document.getElementById('modalBackground').style.display = 'none'
     }
   }
   render(){
-    return <div className="modalBackground">
+    return <div className="modalBackground" id="modalBackground">
       <div className="modalContent">
         <div className="modalContentBack"></div>
         <div className="modalBlock modalTop">
+          <div className="modalTitle">Attention</div>
           <div className="modalCloseBtn" onClick={this.closeModal}>
             <FontAwesomeIcon icon={['fas', 'times']} />
           </div>
