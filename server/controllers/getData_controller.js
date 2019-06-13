@@ -5,12 +5,12 @@ const router = express.Router();
 
 let GlobalDataEN = {
   dataMenus: [
-    {name: 'Main', title: 'Main page', id: 'mainPage'},
-    {name: 'About', title: 'About me', id: 'aboutPage'},
-    {name: 'Skills', title: 'My Skills', id: 'skillsPage'},
-    {name: 'Blog', title: 'My Blog', id: 'blogPage'},
-    {name: 'Projects', title: 'My Projects', id: 'projectsPage'},
-    {name: 'Contacts', title: 'Call of me', id: 'callPage'}
+    {name: 'Main', title: 'Main page', id: 'mainPage', yakor:"yakor_main"},
+    {name: 'About', title: 'About me', id: 'aboutPage', yakor:"yakor_about"},
+    {name: 'Skills', title: 'My Skills', id: 'skillsPage', yakor:"yakor_skills"},
+    {name: 'Blog', title: 'My Blog', id: 'blogPage', yakor:"yakor_block"},
+    {name: 'Projects', title: 'My Projects', id: 'projectsPage', yakor:"yakor_projects"},
+    {name: 'Contacts', title: 'Call of me', id: 'callPage', yakor:"yakor_call"}
   ],
   socials: {
     vk: 'https://vk.com/id203064133',
@@ -100,7 +100,16 @@ let GlobalDataEN = {
       image: null,
       tech: ["jQuery","Node.js","MapBOX"]
     }
-  ]
+  ],
+  startModalText: `Greetings, visitor!
+  
+  If you came here it means you are interested in looking at my works, but I want to say something before you start looking.
+
+  This is only a BETA version of my portfolio and I have not had time to add much information yet.
+
+  I will be very grateful if you do not strictly judge the errors and shortcomings in a short time I will correct them.
+
+  Thanks for attention!`
 }
 
 var getdata = (req, res, next) => {

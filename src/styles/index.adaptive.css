@@ -2,6 +2,9 @@
   .projectsContainer{
     width: calc(100% / 5 - 6px);
   }
+  .aboutBlockData{
+    max-width: calc(100% - 50px);
+  }
 }
 
 @media screen and (max-width: 880px) {

@@ -343,6 +343,11 @@ html {
   float: left;
 }
 
+.centerMinBtnBack svg{
+  position: relative;
+  z-index: -1;
+}
+
 .navCenter.openedMenu .openedMenuText{
   font-size: 30px;
   display: inline-block;
@@ -3355,6 +3360,12 @@ filter: grayscale(80%);
   font-size: 16px;
   margin-bottom: 7px;
   cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+div.otherContent div.menu_btn:hover{
+    color: #ffa0a0;
 }
 
 .toTopClicker{
@@ -3486,6 +3497,10 @@ filter: grayscale(80%);
   display: none;
 }
 
+.modalBackground.openedModal{
+  display: block;
+}
+
 .modalContent{
   position: absolute;
   left: 50%;
@@ -3547,6 +3562,7 @@ filter: grayscale(80%);
   border-top: 1px solid #acacac;
   border-bottom: 1px solid #acacac;
   padding: 10px 10px;
+  white-space: pre-line;
 }
 
 .modalCloseBtn{

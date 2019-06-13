@@ -77,13 +77,14 @@ class MainBlock extends React.Component {
     this.timeoutId = setTimeout(function () {
         this.setState({show: true});
     }.bind(this), 2000);
-    (function () {
-      var camera, drawStars, fillLight, mesh, renderer, scene;
+
+
+      let camera, drawStars, fillLight, mesh, renderer, scene, canvasMethod;
 
       camera = mesh = scene = renderer = fillLight = void 0;
 
-      drawStars = function () {
-        var canvas, ctx, i, j, sizeRandom;
+      drawStars = () => {
+        let canvas, ctx, i, j, sizeRandom;
         canvas = document.createElement('canvas');
         canvas.setAttribute('width', window.innerWidth);
         canvas.setAttribute('height', window.innerHeight);
@@ -99,8 +100,8 @@ class MainBlock extends React.Component {
         return document.getElementById('cloud-overlay').appendChild(canvas);
       };
 
-      window.onload = function () {
-        var animate, base, baseMat, e, geometryBase, highTerran, highTerranMat, light, material, terran, terranGeom, terranHighGeom;
+      canvasMethod = () => {
+        let animate, base, baseMat, e, geometryBase, highTerran, highTerranMat, light, material, terran, terranGeom, terranHighGeom;
         drawStars();
         camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
         camera.position.z = 1000;
@@ -161,9 +162,15 @@ class MainBlock extends React.Component {
           return renderer.render(scene, camera);
         };
         return animate();
+      }
+
+      window.onload = () => {
+        canvasMethod();
       };
 
-    }).call(this);
+  
+      window.addEventListener("resize", canvasMethod);
+
   }
 
   componentWillUnmount () {

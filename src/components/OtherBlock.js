@@ -4,9 +4,15 @@ import Bounce from 'react-reveal/Bounce';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const footerLogo = require('../images/MyLogotype.png');
 
+let toTopThisScroll = (e) => {
+  let toTopposition = document.getElementById(e.target.getAttribute('toyakor')).offsetTop;
+  document.getElementById('scrollBlock').getElementsByTagName('div')[0].scrollTo({top: toTopposition, behavior: 'smooth'});
+  // document.getElementById('scrollBlock').getElementsByTagName('div')[0].scrollTo({top: 0, behavior: 'smooth'});
+}
+
 let parseMenu = (dataMenu, m) => {
   if(m){
-    const menuBtn = dataMenu.map((comp, key) => <div key={key} className="menu_btn" style={{color: (comp.color !== undefined)?comp.color: 'white' }} id={comp.id} def-title={comp.title}>{comp.name}</div>);
+    const menuBtn = dataMenu.map((comp, key) => <div key={key} onClick={toTopThisScroll.bind(this)} toyakor={comp.yakor} className="menu_btn" id={comp.id} def-title={comp.title}>{comp.name}</div>);
     return menuBtn
   }else{
     return <div className="menu_btn">No data found</div>
