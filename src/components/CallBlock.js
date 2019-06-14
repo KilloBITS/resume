@@ -3,10 +3,23 @@ import Bounce from 'react-reveal/Bounce';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+let messageStatus = (a) => {
+    let defClass = "messageStatus ";
+    let statusText = "";
+    switch (a){
+      case 1: defClass += "sending"; statusText = 'Sending message'; break;
+      case 2: defClass += "success"; statusText = 'Message succesfull'; break;
+      case 3: defClass += "fail"; statusText = 'Message fail'; break;
+    }
+  return <div className={defClass}>Message succesfull</div>
+}
+
+
 class CallBackForm extends React.Component{
   constructor(props) {
       super(props);
       this.state = {
+          messagestatus: false,
           firstName: '',
           lastName: '',
           phone: '',
@@ -53,7 +66,6 @@ class CallBackForm extends React.Component{
     });
   }
   handleFormSubmit(event) {
-      // this.hideFormInput();
       event.preventDefault();
       this.setState({
           userData: {
@@ -65,13 +77,31 @@ class CallBackForm extends React.Component{
           }
       })
 
-      axios.post('//134.249.117.218:5000/postMessage', {
+      this.setState({
+        messageStatusNumber: 1,
+        messagestatus: true
+      });
+
+      axios.post('//localhost:5000/postMessage', {
           text: this.state
         }).then(res => {
-         console.log(res.data);
+
+         this.setState({
+           messageStatusNumber: 2,
+           messagestatus: true
+         });
+
+         setTimeout(() => {
+           this.setState({
+             messagestatus: false
+           });
+         }, 2000);
+
          return false
       });
-      return false
+
+
+
   }
   inputIsEmpty(input) {
       return input === '';
@@ -87,7 +117,14 @@ class CallBackForm extends React.Component{
       });
   }
   render(){
-    return <div className="contactMessageForm">
+    let appendedDOM;
+    if (this.state.messagestatus) {
+        appendedDOM = messageStatus(this.state.messageStatusNumber);
+    } else {
+        appendedDOM = "";
+    }
+    return <div className="contactMessageForm" id="contactMessageForm">
+      {appendedDOM}
       <form onSubmit={this.handleFormSubmit.bind(this)}>
         <input className="form-control" type="text" name="first_name" value={this.state.firstName} onChange={this.handleFirstNameChange.bind(this)} placeholder="First Name"/>
         <input className="form-control" type="text" name="last_name" value={this.state.lastName} onChange={this.handleLastNameChange.bind(this)} placeholder="Last Name"/>

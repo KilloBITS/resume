@@ -3580,3 +3580,26 @@ div.otherContent div.menu_btn:hover{
   float: right;
   cursor: pointer;
 }
+
+.messageStatus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #1b1d1e;
+  text-align: center;
+  color: white;
+  line-height: 400px;
+}
+
+.sending{
+
+}
+.success{
+
+}
+.fail{
+
+}
