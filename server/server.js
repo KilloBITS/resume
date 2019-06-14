@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bParser = require('body-parser');
 const app = express();
 
 //CORS middleware
@@ -9,6 +10,9 @@ var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 }
+
+app.use(bParser.urlencoded({limit: '50mb'}));
+app.use(bParser.json());
 app.use(allowCrossDomain);
 app.use(express.static(path.join(__dirname, '../build')));
 
