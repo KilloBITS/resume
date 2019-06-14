@@ -79,7 +79,7 @@ class MainBlock extends React.Component {
     }.bind(this), 2000);
 
 
-      let camera, drawStars, fillLight, mesh, renderer, scene, canvasMethod;
+      let camera, drawStars, fillLight, mesh, renderer, scene, canvasMethod, removeCanvas;
 
       camera = mesh = scene = renderer = fillLight = void 0;
 
@@ -90,17 +90,26 @@ class MainBlock extends React.Component {
         canvas.setAttribute('height', window.innerHeight);
         canvas.setAttribute('id', "stars");
         ctx = canvas.getContext('2d');
-        ctx.fillStyle = "#1b1d1e";
-        for (i = j = 0; j <= 200; i = ++j) {
-          ctx.beginPath();
-          sizeRandom = Math.random() * 2;
-          ctx.arc(Math.random() * window.innerWidth, Math.random() * window.innerHeight, sizeRandom, 0, 2 * Math.PI, 0);
-          ctx.fill();
-        }
+        ctx.fillStyle = "white";
+
         return document.getElementById('cloud-overlay').appendChild(canvas);
       };
 
+      removeCanvas = () => {
+        try{
+          if(document.getElementById('cloud-overlay').getElementsByTagName('canvas')[0] !== undefined){
+            document.getElementById('cloud-overlay').getElementsByTagName('canvas')[0].remove()
+          }
+          if(document.getElementById('cloud-overlay').getElementsByTagName('canvas')[1] !== undefined){
+            document.getElementById('cloud-overlay').getElementsByTagName('canvas')[1].remove()
+          }
+        }catch(e){
+
+        }
+      }
+
       canvasMethod = () => {
+        removeCanvas();
         let animate, base, baseMat, e, geometryBase, highTerran, highTerranMat, light, material, terran, terranGeom, terranHighGeom;
         drawStars();
         camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
@@ -168,7 +177,7 @@ class MainBlock extends React.Component {
         canvasMethod();
       };
 
-  
+
       window.addEventListener("resize", canvasMethod);
 
   }
