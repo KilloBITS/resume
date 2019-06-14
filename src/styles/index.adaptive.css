@@ -35,12 +35,13 @@
   .navCenter.openedMenu .menuLogotype img {
     max-width: 210px;
   }
-  .navBar .navCenter.openedMenu .centerMinBtnBack svg{
+  .navBar .navCenter.openedMenu .centerMinBtnBack svg, .navBar .navCenter.openedMenu .centerMinBtnBack1 svg{
     display: none;
   }
   .navCenter.openedMenu .openedMenuText {
     width: calc(100%);
     text-transform: uppercase;
+    font-size: 20px;
   }
   .navCenter{
     /* display: none; */
@@ -128,9 +129,12 @@
     width: 100%;
     max-width: 100%;
   }
+  .myVideoBlog{
+    padding-bottom: 70px;
+  }
   .videoBlock {
     max-width: calc(100% - 30px);
-    margin-bottom: 65px;
+    margin-bottom: 0px;
   }
   .videoBlock video {
     max-width: 100%;
@@ -204,7 +208,7 @@
   }
   .centerLine {
     width: 2px;
-    height: 190px;
+    height: 156px;
     margin-top: 0px;
   }
   .downloadableResume{
@@ -281,6 +285,15 @@
   }
   .footerLogotype{
     text-align: center;
+  }
+  .modalContent{
+    width: calc(100% - 40px);
+  }
+  .aboutBlockData{
+    max-width: 100%;
+  }
+  .navBar .navCenter.openedMenu .centerMinBtnBack {
+    height: 26px;
   }
 }
 

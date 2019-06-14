@@ -53,7 +53,8 @@ class CallBackForm extends React.Component{
     });
   }
   handleFormSubmit(event) {
-      this.hideFormInput();
+      // this.hideFormInput();
+      event.preventDefault();
       this.setState({
           userData: {
               firstName: (this.inputIsEmpty(this.state.firstName) ? '' : this.state.firstName),
@@ -67,8 +68,10 @@ class CallBackForm extends React.Component{
       axios.post('//134.249.117.218:5000/postMessage', {
           body: this.state
         }).then(res => {
-         console.log(res.data)
+         console.log(res.data);
+         return false
       });
+      return false
   }
   inputIsEmpty(input) {
       return input === '';
