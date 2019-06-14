@@ -66,7 +66,7 @@ class CallBackForm extends React.Component{
       })
 
       axios.post('//134.249.117.218:5000/postMessage', {
-          body: this.state
+          text: this.state
         }).then(res => {
          console.log(res.data);
          return false

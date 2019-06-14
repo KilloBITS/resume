@@ -3236,6 +3236,7 @@ filter: grayscale(80%);
 .callData textarea.form-control{
   height: 120px;
   resize: none;
+  line-height: 22px;
 }
 
 .callData .submitBtn{
