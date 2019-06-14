@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 });
 
 
-дуе postMessage = (req, res, next) => {
+let postMessage = (req, res, next) => {
   var text = req.body;
   console.log(text)
   // var mailOptions = {
