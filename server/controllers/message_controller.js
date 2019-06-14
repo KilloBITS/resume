@@ -15,13 +15,13 @@ const transporter = nodemailer.createTransport({
 let postMessage = (req, res, next) => {
   var text = req.body;
   console.log(text)
-  // var mailOptions = {
-  //     from: "MyResume_kaleniuk@gmail.com", // sender address
-  //     to: "mr.kalinuk@gmail.com", // list of receivers
-  //     subject: "Сообщение с сайта резюме", // Subject line
-  //     text:  req.body.text, // plain text body
-  // };
-  // transporter.sendMail(mailOptions, function (error, info) {});
+  var mailOptions = {
+      from: "MyResume_kaleniuk@gmail.com", // sender address
+      to: "mr.kalinuk@gmail.com", // list of receivers
+      subject: "Сообщение с сайта резюме", // Subject line
+      text:  req.body.text, // plain text body
+  };
+  transporter.sendMail(mailOptions, function (error, info) {});
   res.send({code: 500, txt:'12345'});
 };
 
