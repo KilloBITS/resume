@@ -93,6 +93,15 @@ class CallBackForm extends React.Component{
 
          setTimeout(() => {
            this.setState({
+               userData: {
+                   firstName: "",
+                   lastName: "",
+                   phoneNumber: "",
+                   email: "",
+                   text: ""
+               }
+           })
+           this.setState({
              messagestatus: false
            });
          }, 2000);
