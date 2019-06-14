@@ -63,8 +63,11 @@ class CallBackForm extends React.Component{
           }
       })
 
-      console.log(this.state);
-      event.preventDefault();
+      axios.post('//134.249.117.218:5000/postMessage', {
+          body: this.state
+        }).then(res => {
+         console.log(res.data)
+      });
   }
   inputIsEmpty(input) {
       return input === '';

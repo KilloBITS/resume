@@ -49,7 +49,7 @@ class BodyContent extends React.Component {
     }
   }
   componentDidMount() {
-    axios.post('http://localhost:5000/getData').then(res => {
+    axios.post('http://134.249.117.218:5000/getData').then(res => {
        this.setState(res.data.data);
        this.setState({blockLoad: functions.init});
        window.addEventListener('load', functions.init);

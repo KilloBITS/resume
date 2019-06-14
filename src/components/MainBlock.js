@@ -78,30 +78,12 @@ class MainBlock extends React.Component {
         this.setState({show: true});
     }.bind(this), 2000);
 
-
       let camera, drawStars, fillLight, mesh, renderer, scene, canvasMethod, removeCanvas;
-
       camera = mesh = scene = renderer = fillLight = void 0;
-
-      drawStars = () => {
-        let canvas, ctx, i, j, sizeRandom;
-        canvas = document.createElement('canvas');
-        canvas.setAttribute('width', window.innerWidth);
-        canvas.setAttribute('height', window.innerHeight);
-        canvas.setAttribute('id', "stars");
-        ctx = canvas.getContext('2d');
-        ctx.fillStyle = "white";
-
-        return document.getElementById('cloud-overlay').appendChild(canvas);
-      };
-
       removeCanvas = () => {
         try{
           if(document.getElementById('cloud-overlay').getElementsByTagName('canvas')[0] !== undefined){
             document.getElementById('cloud-overlay').getElementsByTagName('canvas')[0].remove()
-          }
-          if(document.getElementById('cloud-overlay').getElementsByTagName('canvas')[1] !== undefined){
-            document.getElementById('cloud-overlay').getElementsByTagName('canvas')[1].remove()
           }
         }catch(e){
 
@@ -111,7 +93,6 @@ class MainBlock extends React.Component {
       canvasMethod = () => {
         removeCanvas();
         let animate, base, baseMat, e, geometryBase, highTerran, highTerranMat, light, material, terran, terranGeom, terranHighGeom;
-        drawStars();
         camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
         camera.position.z = 1000;
         scene = new THREE.Scene();
