@@ -101,10 +101,10 @@ let GlobalDataEN = {
       tech: ["jQuery","Node.js","MapBOX"]
     },
     {
-      status: false,
+      status: true,
       title: 'Vernissage shop',
       desc: 'Online shop',
-      link: 'vernissage-shop.com',
+      link: 'http://vernissage-shop.com/',
       git: 'https://github.com/KilloBITS/vernissage',
       date: 'current',
       image: null,

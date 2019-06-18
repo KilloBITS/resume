@@ -82,7 +82,9 @@ class BlogBlock extends React.Component {
                   </div>
                 </div>
                 </Bounce>
-                <div className="youTubeChannelBtn"><FontAwesomeIcon icon={['fab', 'youtube']} /> MY YOUTUBE CHANNEL</div>
+                <a href="https://www.youtube.com/channel/UC7-r6c_PNsMOT_iX_fB5mew/featured?view_as=subscriber" target="_blank">
+                  <div className="youTubeChannelBtn"> <FontAwesomeIcon icon={['fab', 'youtube']} /> MY YOUTUBE CHANNEL</div>
+                </a>
               </div>
             </div>
   }
