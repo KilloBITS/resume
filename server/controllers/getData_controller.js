@@ -99,10 +99,20 @@ let GlobalDataEN = {
       date: 'current',
       image: null,
       tech: ["jQuery","Node.js","MapBOX"]
+    },
+    {
+      status: false,
+      title: 'Vernissage shop',
+      desc: 'Online shop',
+      link: 'vernissage-shop.com',
+      git: 'https://github.com/KilloBITS/vernissage',
+      date: 'current',
+      image: null,
+      tech: ["jQuery","Node.js","Font Awesome"]
     }
   ],
   startModalText: `Greetings, visitor!
-  
+
   If you came here it means you are interested in looking at my works, but I want to say something before you start looking.
 
   This is only a BETA version of my portfolio and I have not had time to add much information yet.
