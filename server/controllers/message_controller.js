@@ -15,8 +15,14 @@ var SHABLON_MESSAGE = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional
 
 
 let postMessage = (req, res, next) => {
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+
+	today = mm + '/' + dd + '/' + yyyy;
+
   let data = req.body.text;
-  console.log(data)
   let message = '{'+data.firstName + ' ' + data.lastName +'}' +
                 "("+data.phone+")"+
                 "["+data.text+"]";
@@ -24,7 +30,7 @@ let postMessage = (req, res, next) => {
       from: "MyResume.kaleniuk@gmail.com", // sender address
       to: "mr.kalinuk@gmail.com", // list of receivers
       subject: "Сообщение с сайта резюме ("+ data.email +")", // Subject line
-			html: HTMLTemplate('Web Developer Kaleniuk messager', "suka", "LOL lol LOL lol LOL lol LOL lol LOL lol LOL lol LOL lol LOL lol LOL lol LOL lol "),
+			html: HTMLTemplate('Web Developer - Kaleniuk Ihor', today, data.email, data.firstName+' '+data.lastName, data.text),
       text: message, // plain text body
   };
 

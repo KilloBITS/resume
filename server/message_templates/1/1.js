@@ -1,4 +1,4 @@
-var HTMLTemplate = function(title, text, info){
+var HTMLTemplate = function(title, date, user, username, textmessage){
   var standart = '<!DOCTYPE html>'+
   '<html lang="en">'+
   '<head>'+
@@ -23,7 +23,7 @@ var HTMLTemplate = function(title, text, info){
                                       '<td bgcolor="#ffffff" width="400" align="right" class="mobile-hide">'+
                                           '<table border="0" cellpadding="0" cellspacing="0">'+
                                               '<tr>'+
-                                                  '<td align="right" style="padding: 0 0 5px 0; font-size: 14px; font-family: Arial, sans-serif; color: #666666; text-decoration: none;">'+'<span style="color: #666666; text-decoration: none;">'+text+'</span>'+'</td>'+
+                                                  '<td align="right" style="padding: 0 0 5px 0; font-size: 14px; font-family: Arial, sans-serif; color: #666666; text-decoration: none;">'+'<span style="color: #666666; text-decoration: none;">'+date+'</span>'+'</td>'+
                                               '</tr>'+
                                           '</table>'+
                                       '</td>'+
@@ -52,7 +52,7 @@ var HTMLTemplate = function(title, text, info){
                                                         '<table width="100%" border="0" cellspacing="0" cellpadding="0">'+
                                                             '<tr>'+
                                                                 '<td>'+
-                                                                    '<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/responsive-email.jpg" width="500" height="200" border="0" alt="Can an email really be responsive?" style="display: block; padding: 0; color: #666666; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 500px; height: 200px;" class="img-max">'+'</a>'+
+                                                                    '<a href="http://kaleniuk.top/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/responsive-email.jpg" width="500" height="200" border="0" alt="Can an email really be responsive?" style="display: block; padding: 0; color: #666666; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 500px; height: 200px;" class="img-max">'+'</a>'+
                                                                 '</td>'+
                                                               '</tr>'+
                                                           '</table>'+
@@ -69,7 +69,7 @@ var HTMLTemplate = function(title, text, info){
                                               '<td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy">'+title+'</td>'+
                                           '</tr>'+
                                           '<tr>'+
-                                              '<td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">Using fluid structures, fluid images, and media queries, we can make email (nearly) as responsive as modern websites.</td>'+
+                                              '<td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">This message was sent by the user - <a href="mailto:'+user+'">'+username+'</a> from the site portfolio.</td>'+
                                           '</tr>'+
                                       '</table>'+
                                   '</td>'+
@@ -81,7 +81,7 @@ var HTMLTemplate = function(title, text, info){
                                               '<td align="center" style="padding: 25px 0 0 0;" class="padding-copy">'+
                                                   '<table border="0" cellspacing="0" cellpadding="0" class="responsive-table">'+
                                                       '<tr>'+
-                                                          '<td align="center">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #5D9CEC; border-top: 15px solid #5D9CEC; border-bottom: 15px solid #5D9CEC; border-left: 25px solid #5D9CEC; border-right: 25px solid #5D9CEC; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block;" class="mobile-button">Learn How &rarr;</a>'+'</td>'+
+                                                          '<td align="center">'+'<a href="http://kaleniuk.top/" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #5D9CEC; border-top: 15px solid #5D9CEC; border-bottom: 15px solid #5D9CEC; border-left: 25px solid #5D9CEC; border-right: 25px solid #5D9CEC; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block;" class="mobile-button">To site &rarr;</a>'+'</td>'+
                                                       '</tr>'+
                                                   '</table>'+
                                               '</td>'+
@@ -107,10 +107,10 @@ var HTMLTemplate = function(title, text, info){
                                   '<td>'+
                                       '<table width="100%" border="0" cellspacing="0" cellpadding="0">'+
                                           '<tr>'+
-                                              '<td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333;" class="padding-copy">Mobile opens are at 48%</td>'+
+                                              '<td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333;" class="padding-copy">Message</td>'+
                                           '</tr>'+
                                           '<tr>'+
-                                              '<td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">With an increasingly mobile audience, can you really afford to keep sending emails designed for desktop?</td>'+
+                                              '<td align="center" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">'+textmessage+'</td>'+
                                           '</tr>'+
                                       '</table>'+
                                   '</td>'+
@@ -122,132 +122,7 @@ var HTMLTemplate = function(title, text, info){
                                               '<td align="center" style="padding: 25px 0 0 0;" class="padding-copy">'+
                                                   '<table border="0" cellspacing="0" cellpadding="0" class="responsive-table">'+
                                                       '<tr>'+
-                                                          '<td align="center">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #48CFAD; border-top: 15px solid #48CFAD; border-bottom: 15px solid #48CFAD; border-left: 25px solid #48CFAD; border-right: 25px solid #48CFAD; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block;" class="mobile-button">Hell No &rarr;</a>'+'</td>'+
-                                                      '</tr>'+
-                                                  '</table>'+
-                                              '</td>'+
-                                          '</tr>'+
-                                      '</table>'+
-                                  '</td>'+
-                              '</tr>'+
-                              '<tr>'+
-                                  '<td>'+
-                                      '<table width="100%" border="0" cellspacing="0" cellpadding="0">'+
-                                          '<tr>'+
-                                              '<td style="padding: 50px 0 0 0;" align="center">'+
-                                                  '<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/line-graph.jpg" width="500" height="180" border="0" alt="Mobile opens are on the rise" class="img-max" style="display: block; padding: 0; font-family: Helvetica, Arial, sans-serif; color: #666666; width: 500px; height: 180px;">'+'</a>'+
-                                              '</td>'+
-                                          '</tr>'+
-                                      '</table>'+
-                                  '</td>'+
-                              '</tr>'+
-                          '</table>'+
-                      '</td>'+
-                  '</tr>'+
-              '</table>'+
-          '</td>'+
-      '</tr>'+
-  '</table>'+
-  '<table border="0" cellpadding="0" cellspacing="0" width="100%">'+
-      '<tr>'+
-          '<td bgcolor="#ffffff" align="center" style="padding: 70px 15px 70px 15px;" class="section-padding">'+
-              '<table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">'+
-                  '<tr>'+
-                      '<td>'+
-                          '<table width="100%" border="0" cellspacing="0" cellpadding="0">'+
-                              '<tr>'+
-                                  '<td align="center" style="font-size: 25px; font-family: Helvetica, Arial, sans-serif; color: #333333;" class="padding-copy">How does it work?</td>'+
-                              '</tr>'+
-                              '<tr>'+
-                                  '<td align="center" style="padding: 20px 0 20px 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">Responsive email works on the same principles as RWD:</td>'+
-                              '</tr>'+
-                          '</table>'+
-                      '</td>'+
-                  '</tr>'+
-                  '<tr>'+
-                      '<td>'+
-                          '<!-- TWO COLUMNS -->'+
-                          '<table cellspacing="0" cellpadding="0" border="0" width="100%">'+
-                              '<tr>'+
-                                  '<td valign="top" style="padding: 0;" class="mobile-wrapper">'+
-                                      '<!-- LEFT COLUMN -->'+
-                                      '<table cellpadding="0" cellspacing="0" border="0" width="47%" align="left" class="responsive-table">'+
-                                          '<tr>'+
-                                              '<td style="padding: 20px 0 40px 0;">'+
-                                                  '<table cellpadding="0" cellspacing="0" border="0" width="100%">'+
-                                                      '<tr>'+
-                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/fluid-images.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Fluid images" border="0" class="img-max">'+'</a>'+'</td>'+
-                                                      '</tr>'+
-                                                      '<tr>'+
-                                                          '<td align="center" style="padding: 15px 0 0 0; font-family: Arial, sans-serif; color: #333333; font-size: 20px;" bgcolor="#ffffff">Fluid Images</td>'+
-                                                      '</tr>'+
-                                                      '<tr>'+
-                                                          '<td align="center" style="padding: 5px 0 0 0; font-family: Arial, sans-serif; color: #666666; font-size: 14px; line-height: 20px;" bgcolor="#ffffff">'+'<span class="appleBody">'+'<span style="font-family:Lucida Console, monospace;"></span> is your friend, just like on the web.</span>'+'</td>'+
-                                                      '</tr>'+
-                                                  '</table>'+
-                                              '</td>'+
-                                          '</tr>'+
-                                      '</table>'+
-                                      '<!-- RIGHT COLUMN -->'+
-                                      '<table cellpadding="0" cellspacing="0" border="0" width="47%" align="right" class="responsive-table">'+
-                                          '<tr>'+
-                                              '<td style="padding: 20px 0 40px 0;">'+
-                                                  '<table cellpadding="0" cellspacing="0" border="0" width="100%">'+
-                                                      '<tr>'+
-                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/fluid-structure.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Fluid structures" border="0" class="img-max">'+'</a>'+'</td>'+
-                                                      '</tr>'+
-                                                      '<tr>'+
-                                                          '<td align="center" style="padding: 15px 0 0 0; font-family: Arial, sans-serif; color: #333333; font-size: 20px;" bgcolor="#ffffff">Fluid Structure</td>'+
-                                                      '</tr>'+
-                                                      '<tr>'+
-                                                          '<td align="center" style="padding: 5px 0 0 0; font-family: Arial, sans-serif; color: #666666; font-size: 14px; line-height: 20px;" bgcolor="#ffffff">'+'<span class="appleBody">You can use percentage-based tables, too. Don&rsquo;t touch <em></em>, though.</span>'+'</td>'+
-                                                      '</tr>'+
-                                                  '</table>'+
-                                              '</td>'+
-                                          '</tr>'+
-                                      '</table>'+
-                                  '</td>'+
-                              '</tr>'+
-                          '</table>'+
-                      '</td>'+
-                  '</tr>'+
-                  '<tr>'+
-                      '<td>'+
-                          '<!-- TWO COLUMNS -->'+
-                          '<table cellspacing="0" cellpadding="0" border="0" width="100%">'+
-                              '<tr>'+
-                                  '<td valign="top" style="padding: 0;" class="mobile-wrapper">'+
-                                      '<!-- LEFT COLUMN -->'+
-                                      '<table cellpadding="0" cellspacing="0" border="0" width="47%" align="left" class="responsive-table">'+
-                                          '<tr>'+
-                                              '<td style="padding: 20px 0 40px 0;">'+
-                                                  '<table cellpadding="0" cellspacing="0" border="0" width="100%">'+
-                                                      '<tr>'+
-                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/media-queries.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Media queries" border="0" class="img-max">'+'</a>'+'</td>'+
-                                                      '</tr>'+
-                                                      '<tr>'+
-                                                          '<td align="center" style="padding: 15px 0 0 0; font-family: Arial, sans-serif; color: #333333; font-size: 20px;" bgcolor="#ffffff">Media Queries</td>'+
-                                                      '</tr>'+
-                                                      '<tr>'+
-                                                          '<td align="center" style="padding: 5px 0 0 0; font-family: Arial, sans-serif; color: #666666; font-size: 14px; line-height: 20px;" bgcolor="#ffffff">'+'<span class="appleBody">They don&rsquo;t work everywhere, but when they do&hellip;</span>'+'</td>'+
-                                                      '</tr>'+
-                                                  '</table>'+
-                                              '</td>'+
-                                          '</tr>'+
-                                      '</table>'+
-                                      '<!-- RIGHT COLUMN -->'+
-                                      '<table cellpadding="0" cellspacing="0" border="0" width="47%" align="right" class="responsive-table">'+
-                                          '<tr>'+
-                                              '<td style="padding: 20px 0 40px 0;">'+
-                                                  '<table cellpadding="0" cellspacing="0" border="0" width="100%">'+
-                                                      '<tr>'+
-                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/bulletproof-buttons.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Bulletproof buttons" border="0" class="img-max">'+'</a>'+'</td>'+
-                                                      '</tr>'+
-                                                      '<tr>'+
-                                                          '<td align="center" style="padding: 15px 0 0 0; font-family: Arial, sans-serif; color: #333333; font-size: 20px;" bgcolor="#ffffff">Bulletproof Buttons</td>'+
-                                                      '</tr>'+
-                                                      '<tr>'+
-                                                          '<td align="center" style="padding: 5px 0 0 0; font-family: Arial, sans-serif; color: #666666; font-size: 14px; line-height: 20px;" bgcolor="#ffffff">'+'<span class="appleBody">Don&rsquo;t use images for buttons. There&rsquo;s a better way.</span>'+'</td>'+
+                                                          '<td align="center">'+'<a href="mailto:'+user+'" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #ffffff; text-decoration: none; background-color: #48CFAD; border-top: 15px solid #48CFAD; border-bottom: 15px solid #48CFAD; border-left: 25px solid #48CFAD; border-right: 25px solid #48CFAD; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; display: inline-block;" class="mobile-button">Callback &rarr;</a>'+'</td>'+
                                                       '</tr>'+
                                                   '</table>'+
                                               '</td>'+
@@ -262,8 +137,6 @@ var HTMLTemplate = function(title, text, info){
           '</td>'+
       '</tr>'+
   '</table>'+
-
-
   '<!-- COMPACT ARTICLE SECTION -->'+
   '<table border="0" cellpadding="0" cellspacing="0" width="100%">'+
       '<tr>'+
