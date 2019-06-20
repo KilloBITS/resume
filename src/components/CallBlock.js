@@ -76,7 +76,7 @@ class CallBackForm extends React.Component{
 
       if(EmailValidator.validate(this.state.email)){
         document.getElementById('emailValidator').className = 'form-control remScript'
-        axios.post('//localhost:5000/postMessage', {text: this.state}).then(res => {
+        axios.post('http://134.249.117.218:5000/postMessage', {text: this.state}).then(res => {
           setTimeout(() => {
             this.setState({
               messageStatusNumber: 2,
