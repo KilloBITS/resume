@@ -131,6 +131,7 @@ class CallBackForm extends React.Component{
     }
     return <div className="contactMessageForm" id="contactMessageForm">
       {appendedDOM}
+      <iframe src={"https://maps.micro-gis.com/"}/>
       <form onSubmit={this.handleFormSubmit.bind(this)}>
         <input className="form-control remScript" type="text" name="first_name" value={this.state.firstName} onChange={this.handleFirstNameChange.bind(this)} placeholder="First Name"/>
         <input className="form-control remScript" type="text" name="last_name" value={this.state.lastName} onChange={this.handleLastNameChange.bind(this)} placeholder="Last Name"/>
