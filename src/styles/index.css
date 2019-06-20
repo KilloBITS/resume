@@ -3610,23 +3610,26 @@ div.otherContent div.menu_btn:hover{
 .success{
 
 }
+
 .fail{
 
 }
 
 
-@-webkit-keyframes rotate {
+@-webkit-keyframes rotatesAnim {
   0% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-@keyframes rotate {
+
+@keyframes rotatesAnim {
   0% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes wink {
   50% {
     opacity: 0;
@@ -3647,11 +3650,11 @@ div.otherContent div.menu_btn:hover{
   border: 2px solid #b46464;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
-  animation: rotate 1s ease infinite;
+  animation: rotatesAnim 1s ease infinite;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: calc(50% - 80px);
+  top: calc(50% - 80px);
+  transform: rotate(0deg);
 }
 
 .callData .form-control.errorBorder{
