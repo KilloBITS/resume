@@ -1,5 +1,6 @@
 import React from 'react';
 import Bounce from 'react-reveal/Bounce';
+import * as EmailValidator from 'email-validator';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -11,7 +12,7 @@ let messageStatus = (a) => {
       case 2: defClass += "success"; statusText = 'Message succesfull'; break;
       case 3: defClass += "fail"; statusText = 'Message fail'; break;
     }
-  return <div className={defClass}>Message succesfull</div>
+  return <div className={defClass}><span>{statusText}</span></div>
 }
 
 
@@ -22,7 +23,7 @@ class CallBackForm extends React.Component{
           messagestatus: false,
           firstName: '',
           lastName: '',
-          phone: '',
+          phoneNumber: '',
           email: '',
           text: '',
           userData: {
@@ -50,7 +51,7 @@ class CallBackForm extends React.Component{
   handlePhoneNumberChange(event) {
       var phone = event.target.value;
       this.setState({
-          phone: phone
+          phoneNumber: phone
       });
   }
   handleEmailChange(event) {
@@ -67,49 +68,45 @@ class CallBackForm extends React.Component{
   }
   handleFormSubmit(event) {
       event.preventDefault();
-      this.setState({
-          userData: {
-              firstName: (this.inputIsEmpty(this.state.firstName) ? '' : this.state.firstName),
-              lastName: (this.inputIsEmpty(this.state.lastName) ? '' : this.state.lastName),
-              phoneNumber: (this.inputIsEmpty(this.state.phone) ? '' : this.state.phone),
-              email: (this.inputIsEmpty(this.state.email) ? '' : this.state.email),
-              text: (this.inputIsEmpty(this.state.text) ? '' : this.state.text),
-          }
-      })
 
       this.setState({
         messageStatusNumber: 1,
         messagestatus: true
       });
 
-      axios.post('//localhost:5000/postMessage', {
-          text: this.state
-        }).then(res => {
+      if(EmailValidator.validate(this.state.email)){
+        document.getElementById('emailValidator').className = 'form-control remScript'
+        axios.post('//localhost:5000/postMessage', {text: this.state}).then(res => {
+          setTimeout(() => {
+            this.setState({
+              messageStatusNumber: 2,
+              messagestatus: true
+            });
 
-         this.setState({
-           messageStatusNumber: 2,
-           messagestatus: true
-         });
-
-         setTimeout(() => {
-           this.setState({
-               userData: {
-                   firstName: "",
-                   lastName: "",
-                   phoneNumber: "",
-                   email: "",
-                   text: ""
-               }
-           })
-           this.setState({
-             messagestatus: false
-           });
-         }, 2000);
-
-         return false
-      });
-
-
+            setTimeout(() => {
+              this.setState({
+                  userData: {
+                      firstName: "",
+                      lastName: "",
+                      phoneNumber: "",
+                      email: "",
+                      text: ""
+                  }
+              })
+              this.setState({
+                messagestatus: false
+              });
+            }, 2000);
+          },2000)
+          return false
+        });
+      }else{
+        this.setState({
+          messageStatusNumber: 3,
+          messagestatus: false
+        });
+        document.getElementById('emailValidator').className = 'form-control remScript errorBorder'
+      }
 
   }
   inputIsEmpty(input) {
@@ -135,11 +132,11 @@ class CallBackForm extends React.Component{
     return <div className="contactMessageForm" id="contactMessageForm">
       {appendedDOM}
       <form onSubmit={this.handleFormSubmit.bind(this)}>
-        <input className="form-control" type="text" name="first_name" value={this.state.firstName} onChange={this.handleFirstNameChange.bind(this)} placeholder="First Name"/>
-        <input className="form-control" type="text" name="last_name" value={this.state.lastName} onChange={this.handleLastNameChange.bind(this)} placeholder="Last Name"/>
-        <input className="form-control" type="text" name="phone_number" value={this.state.phone} onChange={this.handlePhoneNumberChange.bind(this)} placeholder="Phone Number"/>
-        <input className="form-control" type="text" name="email" value={this.state.email} onChange={this.handleEmailChange.bind(this)} placeholder="Email"/>
-        <textarea className="form-control" name="text_callback" value={this.state.text} placeholder="Text message" onChange={this.handleTextChange.bind(this)} ></textarea>
+        <input className="form-control remScript" type="text" name="first_name" value={this.state.firstName} onChange={this.handleFirstNameChange.bind(this)} placeholder="First Name"/>
+        <input className="form-control remScript" type="text" name="last_name" value={this.state.lastName} onChange={this.handleLastNameChange.bind(this)} placeholder="Last Name"/>
+        <input className="form-control remScript" type="text" name="phone_number" value={this.state.phoneNumber} onChange={this.handlePhoneNumberChange.bind(this)} placeholder="Phone Number"/>
+        <input className="form-control remScript" type="text" id="emailValidator" name="email" value={this.state.email} onChange={this.handleEmailChange.bind(this)} placeholder="Email"/>
+        <textarea className="form-control remScript" name="text_callback" value={this.state.text} placeholder="Text message" onChange={this.handleTextChange.bind(this)} ></textarea>
         <div className="form-group">
           <input className="submitBtn" type="submit" value="Submit"/>
           <input className="clearBtn" type="button" value="Clear"/>
@@ -165,11 +162,9 @@ class CallsContacts extends React.Component{
         <div className="contactsLineData">
           <a href={"tel:" + this.props.contacts.number}> Phone number: {this.props.contacts.number} </a>
         </div>
-
         <div className="contactsLineData">
           Address: {this.props.contacts.country},{this.props.contacts.city}
         </div>
-
       </div>
       <div className="socialsContacts">
         <Bounce><div className="socials_mini_icon"><a href={this.props.socials.vk}><FontAwesomeIcon icon={['fab', 'vk']} /></a></div></Bounce>

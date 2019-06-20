@@ -3591,15 +3591,69 @@ div.otherContent div.menu_btn:hover{
   background-color: #1b1d1e;
   text-align: center;
   color: white;
-  line-height: 400px;
 }
 
-.sending{
-
+.messageStatus span{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 14px;
 }
+
+.messageStatus.sending span{
+  -webkit-animation: wink 1.4s ease infinite;
+  animation: wink 1.4s ease infinite;
+}
+
 .success{
 
 }
 .fail{
 
+}
+
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes wink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes wink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.sending:before {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid #b46464;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  animation: rotate 1s ease infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.callData .form-control.errorBorder{
+  border-color: red;
 }

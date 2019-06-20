@@ -15,6 +15,7 @@ app.use(bParser.urlencoded({limit: '50mb'}));
 app.use(bParser.json());
 app.use(allowCrossDomain);
 app.use(express.static(path.join(__dirname, '../build')));
+app.use(express.static(path.join(__dirname, './message_templates/')));
 
 const getData =  require('./controllers/getData_controller');
 app.post('/getData', getData);

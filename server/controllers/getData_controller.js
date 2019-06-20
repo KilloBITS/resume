@@ -2,7 +2,6 @@
 const express = require('express');
 const router = express.Router();
 
-
 let GlobalDataEN = {
   dataMenus: [
     {name: 'Main', title: 'Main page', id: 'mainPage', yakor:"yakor_main"},
