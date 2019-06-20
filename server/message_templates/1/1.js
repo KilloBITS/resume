@@ -19,7 +19,7 @@ var HTMLTemplate = function(title, text, info){
                           '<td style="padding: 20px 0px 30px 0px;" class="logo">'+
                               '<table border="0" cellpadding="0" cellspacing="0" width="100%">'+
                                   '<tr>'+
-                                      '<td bgcolor="#ffffff" width="100" align="left">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img alt="Logo" src="img/logo.jpg" width="52" height="78" style="display: block; font-family: Helvetica, Arial, sans-serif; color: #666666; font-size: 16px;" border="0">'+'</a>'+'</td>'+
+                                      '<td bgcolor="#ffffff" width="100" align="left">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img alt="Logo" src="http://134.249.117.218:5000/1/img/logo.jpg" width="52" height="78" style="display: block; font-family: Helvetica, Arial, sans-serif; color: #666666; font-size: 16px;" border="0">'+'</a>'+'</td>'+
                                       '<td bgcolor="#ffffff" width="400" align="right" class="mobile-hide">'+
                                           '<table border="0" cellpadding="0" cellspacing="0">'+
                                               '<tr>'+
@@ -52,7 +52,7 @@ var HTMLTemplate = function(title, text, info){
                                                         '<table width="100%" border="0" cellspacing="0" cellpadding="0">'+
                                                             '<tr>'+
                                                                 '<td>'+
-                                                                    '<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="img/responsive-email.jpg" width="500" height="200" border="0" alt="Can an email really be responsive?" style="display: block; padding: 0; color: #666666; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 500px; height: 200px;" class="img-max">'+'</a>'+
+                                                                    '<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/responsive-email.jpg" width="500" height="200" border="0" alt="Can an email really be responsive?" style="display: block; padding: 0; color: #666666; text-decoration: none; font-family: Helvetica, arial, sans-serif; font-size: 16px; width: 500px; height: 200px;" class="img-max">'+'</a>'+
                                                                 '</td>'+
                                                               '</tr>'+
                                                           '</table>'+
@@ -135,7 +135,7 @@ var HTMLTemplate = function(title, text, info){
                                       '<table width="100%" border="0" cellspacing="0" cellpadding="0">'+
                                           '<tr>'+
                                               '<td style="padding: 50px 0 0 0;" align="center">'+
-                                                  '<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="img/line-graph.jpg" width="500" height="180" border="0" alt="Mobile opens are on the rise" class="img-max" style="display: block; padding: 0; font-family: Helvetica, Arial, sans-serif; color: #666666; width: 500px; height: 180px;">'+'</a>'+
+                                                  '<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/line-graph.jpg" width="500" height="180" border="0" alt="Mobile opens are on the rise" class="img-max" style="display: block; padding: 0; font-family: Helvetica, Arial, sans-serif; color: #666666; width: 500px; height: 180px;">'+'</a>'+
                                               '</td>'+
                                           '</tr>'+
                                       '</table>'+
@@ -176,7 +176,7 @@ var HTMLTemplate = function(title, text, info){
                                               '<td style="padding: 20px 0 40px 0;">'+
                                                   '<table cellpadding="0" cellspacing="0" border="0" width="100%">'+
                                                       '<tr>'+
-                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="img/fluid-images.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Fluid images" border="0" class="img-max">'+'</a>'+'</td>'+
+                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/fluid-images.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Fluid images" border="0" class="img-max">'+'</a>'+'</td>'+
                                                       '</tr>'+
                                                       '<tr>'+
                                                           '<td align="center" style="padding: 15px 0 0 0; font-family: Arial, sans-serif; color: #333333; font-size: 20px;" bgcolor="#ffffff">Fluid Images</td>'+
@@ -194,7 +194,7 @@ var HTMLTemplate = function(title, text, info){
                                               '<td style="padding: 20px 0 40px 0;">'+
                                                   '<table cellpadding="0" cellspacing="0" border="0" width="100%">'+
                                                       '<tr>'+
-                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="img/fluid-structure.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Fluid structures" border="0" class="img-max">'+'</a>'+'</td>'+
+                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/fluid-structure.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Fluid structures" border="0" class="img-max">'+'</a>'+'</td>'+
                                                       '</tr>'+
                                                       '<tr>'+
                                                           '<td align="center" style="padding: 15px 0 0 0; font-family: Arial, sans-serif; color: #333333; font-size: 20px;" bgcolor="#ffffff">Fluid Structure</td>'+
@@ -223,7 +223,7 @@ var HTMLTemplate = function(title, text, info){
                                               '<td style="padding: 20px 0 40px 0;">'+
                                                   '<table cellpadding="0" cellspacing="0" border="0" width="100%">'+
                                                       '<tr>'+
-                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="img/media-queries.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Media queries" border="0" class="img-max">'+'</a>'+'</td>'+
+                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/media-queries.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Media queries" border="0" class="img-max">'+'</a>'+'</td>'+
                                                       '</tr>'+
                                                       '<tr>'+
                                                           '<td align="center" style="padding: 15px 0 0 0; font-family: Arial, sans-serif; color: #333333; font-size: 20px;" bgcolor="#ffffff">Media Queries</td>'+
@@ -241,7 +241,7 @@ var HTMLTemplate = function(title, text, info){
                                               '<td style="padding: 20px 0 40px 0;">'+
                                                   '<table cellpadding="0" cellspacing="0" border="0" width="100%">'+
                                                       '<tr>'+
-                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="img/bulletproof-buttons.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Bulletproof buttons" border="0" class="img-max">'+'</a>'+'</td>'+
+                                                          '<td align="center" bgcolor="#ffffff" valign="middle">'+'<a href="http://alistapart.com/article/can-email-be-responsive/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/bulletproof-buttons.jpg" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Bulletproof buttons" border="0" class="img-max">'+'</a>'+'</td>'+
                                                       '</tr>'+
                                                       '<tr>'+
                                                           '<td align="center" style="padding: 15px 0 0 0; font-family: Arial, sans-serif; color: #333333; font-size: 20px;" bgcolor="#ffffff">Bulletproof Buttons</td>'+
@@ -274,7 +274,7 @@ var HTMLTemplate = function(title, text, info){
                       '<td align="left" style="padding: 0 0 10px 130px; font-size: 25px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #333333;" class="padding-copy" colspan="2">Resources for learning more</td>'+
                   '</tr>'+
                   '<tr>'+
-                      '<td valign="top" style="padding: 40px 0 0 0;" class="mobile-hide">'+'<a href="https://litmus.com/community" target="_blank">'+'<img src="img/litmus-logo.jpg" alt="Litmus" width="105" height="105" border="0" style="display: block; font-family: Arial; color: #666666; font-size: 14px; width: 105px; height: 105px;">'+'</a>'+'</td>'+
+                      '<td valign="top" style="padding: 40px 0 0 0;" class="mobile-hide">'+'<a href="https://litmus.com/community" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/litmus-logo.jpg" alt="Litmus" width="105" height="105" border="0" style="display: block; font-family: Arial; color: #666666; font-size: 14px; width: 105px; height: 105px;">'+'</a>'+'</td>'+
                       '<td style="padding: 40px 0 0 0;" class="no-padding">'+
                           '<!-- ARTICLE -->'+
                           '<table border="0" cellspacing="0" cellpadding="0" width="100%">'+
@@ -313,7 +313,7 @@ var HTMLTemplate = function(title, text, info){
                       '</td>'+
                   '</tr>'+
                   '<tr>'+
-                      '<td valign="top" style="padding: 40px 0 0 0;" class="mobile-hide">'+'<a href="http://templates.mailchimp.com" target="_blank">'+'<img src="img/mailchimp-logo.jpg" alt="Freddie!" width="105" height="105" border="0" style="display: block; font-family: Arial; color: #666666; font-size: 14px; width: 105px; height: 105px;">'+'</a>'+'</td>'+
+                      '<td valign="top" style="padding: 40px 0 0 0;" class="mobile-hide">'+'<a href="http://templates.mailchimp.com" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/mailchimp-logo.jpg" alt="Freddie!" width="105" height="105" border="0" style="display: block; font-family: Arial; color: #666666; font-size: 14px; width: 105px; height: 105px;">'+'</a>'+'</td>'+
                       '<td style="padding: 40px 0 0 0;" class="no-padding">'+
                           '<!-- ARTICLE -->'+
                           '<table border="0" cellspacing="0" cellpadding="0" width="100%">'+
@@ -352,7 +352,7 @@ var HTMLTemplate = function(title, text, info){
                       '</td>'+
                   '</tr>'+
                   '<tr>'+
-                      '<td valign="top" style="padding: 40px 0 0 0;" class="mobile-hide">'+'<a href="http://www.campaignmonitor.com/resources/" target="_blank">'+'<img src="img/campaign-monitor-logo.jpg" alt="Campaign Monitor" width="105" height="105" border="0" style="display: block; font-family: Arial; color: #666666; font-size: 14px; width: 105px; height: 105px;">'+'</a>'+'</td>'+
+                      '<td valign="top" style="padding: 40px 0 0 0;" class="mobile-hide">'+'<a href="http://www.campaignmonitor.com/resources/" target="_blank">'+'<img src="http://134.249.117.218:5000/1/img/campaign-monitor-logo.jpg" alt="Campaign Monitor" width="105" height="105" border="0" style="display: block; font-family: Arial; color: #666666; font-size: 14px; width: 105px; height: 105px;">'+'</a>'+'</td>'+
                       '<td style="padding: 40px 0 0 0;" class="no-padding">'+
                           '<!-- ARTICLE -->'+
                           '<table border="0" cellspacing="0" cellpadding="0" width="100%">'+
