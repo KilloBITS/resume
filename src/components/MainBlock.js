@@ -10,11 +10,11 @@ class MainBlockContent extends React.Component {
       <Bounce><h1 id="myName">Ihor Kaleniuk</h1></Bounce>
       <h2 className="mainBlockInfoMini">WEB</h2><h2 className="mainBlockInfoMini">DEVELOPER.</h2><h2 className="mainBlockInfoMini">TECHNOLOGY ENTHUSIAST.</h2>
       <div className="socialsLineMini">
-        <Bounce><div className="socials_mini_icon"><a href={this.props.socials.vk}><FontAwesomeIcon icon={['fab', 'vk']} /></a></div></Bounce>
-        <Bounce><div className="socials_mini_icon"><a href={this.props.socials.insta}><FontAwesomeIcon icon={['fab', 'instagram']} /></a></div></Bounce>
-        <Bounce><div className="socials_mini_icon"><a href={this.props.socials.fb}><FontAwesomeIcon icon={['fab', 'facebook']} /></a></div></Bounce>
-        <Bounce><div className="socials_mini_icon"><a href={this.props.socials.in}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a></div></Bounce>
-        <Bounce><div className="socials_mini_icon"><a href={this.props.socials.git}><FontAwesomeIcon icon={['fab', 'github']} /></a></div></Bounce>
+        <Bounce><div className="socials_mini_icon"><a target="_blank" href={this.props.socials.vk}><FontAwesomeIcon icon={['fab', 'vk']} /></a></div></Bounce>
+        <Bounce><div className="socials_mini_icon"><a target="_blank" href={this.props.socials.insta}><FontAwesomeIcon icon={['fab', 'instagram']} /></a></div></Bounce>
+        <Bounce><div className="socials_mini_icon"><a target="_blank" href={this.props.socials.fb}><FontAwesomeIcon icon={['fab', 'facebook']} /></a></div></Bounce>
+        <Bounce><div className="socials_mini_icon"><a target="_blank" href={this.props.socials.in}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a></div></Bounce>
+        <Bounce><div className="socials_mini_icon"><a target="_blank" href={this.props.socials.git}><FontAwesomeIcon icon={['fab', 'github']} /></a></div></Bounce>
       </div>
     </div>
   }

@@ -2159,10 +2159,16 @@ a .downloadBtn{
   background-color: #1b1d1e;
   text-transform: uppercase;
   font-size: 16px;
+  transition: 0.3s;
 }
 
 a .downloadBtn span{
   padding-left: 10px;
+}
+
+a .downloadBtn:hover{
+  background-color: white;
+  color: black;
 }
 
 .hobbiesBlock{

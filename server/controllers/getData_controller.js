@@ -14,8 +14,8 @@ let GlobalDataEN = {
   socials: {
     vk: 'https://vk.com/id203064133',
     insta: 'https://www.instagram.com/xx_kalinka_malinka_xx/',
-    fb: '#',
-    in: 'https://www.linkedin.com/in/ihor-kalinyuk-601613153/',
+    fb: 'https://www.facebook.com/igor.kalinuk.3',
+    in: 'https://www.linkedin.com/in/ihor-kalenyuk-601613153/',
     git: 'https://github.com/KilloBITS'
   },
   contacts: {
