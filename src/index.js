@@ -23,10 +23,10 @@ import CallBlock from './components/CallBlock.js';
 import FooterBlock from './components/FooterBlock.js';
 import OtherBlock from './components/OtherBlock.js';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee, faHome , fas} from '@fortawesome/free-solid-svg-icons'
-library.add(fab, faCheckSquare, faCoffee, fas)
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCheckSquare, faCoffee, faHome , fas} from '@fortawesome/free-solid-svg-icons';
+library.add(fab, faCheckSquare, faCoffee, fas);
 
 
 const my_resume = require('./files/1.pdf')
