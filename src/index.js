@@ -71,7 +71,7 @@ class BodyContent extends React.Component {
          <CallBlock socials={this.state.socials} contacts={this.state.contacts} id="yakor_call"/>
          <FooterBlock />
          <OtherBlock menu={this.state.dataMenus} contacts={this.state.contacts} socials={this.state.socials} />
-         <Modal showModal={true} title={"Attention"} text={this.state.startModalText}/>
+         
      </div>)
   }
 }
