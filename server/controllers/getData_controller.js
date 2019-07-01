@@ -71,6 +71,16 @@ let GlobalDataEN = {
     },
     {
       status: true,
+      title: 'Beauty Saloon',
+      desc: 'Beauty salon project template',
+      link: 'http://134.249.117.218:5001/',
+      git: 'https://github.com/KilloBITS/saloon',
+      date: '01.07.2019',
+      image: 'salon.png',
+      tech: ["React","Node.js","Express"]
+    },
+    {
+      status: true,
       title: 'Lady&Man Clothing store',
       desc: 'Online store for lady & man clothing',
       link: 'http://ladyman.club',
