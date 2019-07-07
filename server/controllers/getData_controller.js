@@ -61,7 +61,7 @@ let GlobalDataEN = {
     },
     {
       status: true,
-      title: 'Nail salom "Cristall"',
+      title: 'Nail salon "Cristall"',
       desc: 'Nail salon project',
       link: 'http://134.249.117.218:5002/',
       git: 'https://github.com/KilloBITS/Cristall',
