@@ -51,16 +51,6 @@ let GlobalDataEN = {
   projects: [
     {
       status: true,
-      title: 'Radioclub "Azimuth"',
-      desc: 'Site from radio club "Azimuth"',
-      link: 'http://ur4wwr.org',
-      git: 'https://github.com/KilloBITS/azimut',
-      date: '01.04.2019',
-      image: 'ur4wwr.png',
-      tech: ["jQuery","Node.js","Express"]
-    },
-    {
-      status: true,
       title: 'My Portfolio',
       desc: 'My web portfolio and resume',
       link: 'http://kaleniuk.top/',
@@ -71,6 +61,16 @@ let GlobalDataEN = {
     },
     {
       status: true,
+      title: 'Nail salom "Cristall"',
+      desc: 'Nail salon project',
+      link: 'http://134.249.117.218:5002/',
+      git: 'https://github.com/KilloBITS/Cristall',
+      date: '07.07.2019',
+      image: 'joxi_screenshot_1562521081242.png',
+      tech: ["React","Node.js"]
+    },
+    {
+      status: true,
       title: 'Beauty Saloon',
       desc: 'Beauty salon project template',
       link: 'http://134.249.117.218:5001/',
@@ -78,6 +78,16 @@ let GlobalDataEN = {
       date: '01.07.2019',
       image: 'salon.png',
       tech: ["React","Node.js","Express"]
+    },
+    {
+      status: true,
+      title: 'Radioclub "Azimuth"',
+      desc: 'Site from radio club "Azimuth"',
+      link: 'http://ur4wwr.org',
+      git: 'https://github.com/KilloBITS/azimut',
+      date: '01.04.2019',
+      image: 'ur4wwr.png',
+      tech: ["jQuery","Node.js","Express"]
     },
     {
       status: true,
