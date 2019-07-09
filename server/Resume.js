@@ -16,6 +16,7 @@ app.use(bParser.json());
 app.use(allowCrossDomain);
 app.use(express.static(path.join(__dirname, '../build')));
 app.use(express.static(path.join(__dirname, './message_templates/')));
+app.use(express.static(path.join(__dirname, './data/')));
 
 const getData =  require('./controllers/getData_controller');
 app.post('/getData', getData);
