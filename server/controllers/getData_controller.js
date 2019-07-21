@@ -61,6 +61,16 @@ let GlobalDataEN = {
     },
     {
       status: true,
+      title: 'Restaurant "Yerevan"',
+      desc: 'Restaurant "Yerevan"',
+      link: 'http://134.249.117.218:5003/',
+      git: 'https://github.com/KilloBITS/erevan',
+      date: '21.07.2019',
+      image: 'yerevan.png',
+      tech: ["React","Node.js"]
+    },
+    {
+      status: true,
       title: 'Nail salon "Cristall"',
       desc: 'Nail salon project',
       link: 'http://134.249.117.218:5002/',
